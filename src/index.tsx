@@ -1,7 +1,16 @@
 // packages;
 import { render } from "react-dom";
+import { BrowserRouter } from "react-router-dom";
 
 // components;
 import { App } from "./components/app/app";
 
-render(<App />, document.getElementById(`root`));
+// styles;
+import "./styles/style.scss";
+
+render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>,
+  document.getElementById(`root`)
+);

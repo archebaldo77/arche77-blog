@@ -11,5 +11,6 @@ export const buildDevServer = (
     port,
     open: true,
     hot: true,
+    historyApiFallback: true,
   };
 };

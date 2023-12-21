@@ -1,13 +1,25 @@
-// components;
-import { Counter } from "../counter/counter";
+// packages;
+import { Routes, Route, Link } from "react-router-dom";
 
-import "../../styles/style.scss";
+// pages;
+import { Main } from "../../pages/main/main";
+import { About } from "../../pages/about/about";
+
+// styles;
+import cls from "./app.module.scss";
 
 export const App = () => {
   return (
-    <div className="app">
+    <div className={cls.app}>
       <h1>React App</h1>
-      <Counter />
+      <div className={cls.links}>
+        <Link to="/">Main page</Link>
+        <Link to="/about">About page</Link>
+      </div>
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
     </div>
   );
 };
