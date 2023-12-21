@@ -1,0 +1,28 @@
+:root {
+  // fonts;
+  --font-family: "Consolas", "Times New Roman", serif;
+
+  --font-size-m: 16px;
+  --font-size-l: 20px;
+
+  --font-line-m: 20px;
+  --font-line-l: 24px;
+
+  --font-weight-m: 400;
+  --font-weight-l: 700;
+
+  --font-main: var(--font-weight-m) var(--font-size-m) / var(--font-line-m)
+    var(--font-family);
+
+  // colors;
+
+  // dark;
+  --bg-color-dark: #161a1d;
+  --primary-color-dark: #b8acf6;
+  --seconday-color-dark: #42b2d7;
+
+  // light;
+  --bg-color-light: #f3f0ff;
+  --primary-color-light: #1c2b41;
+  --seconday-color-light: #50253f;
+}

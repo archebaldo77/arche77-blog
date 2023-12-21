@@ -1,3 +1,8 @@
+@import "./variables/global.scss";
+@import "./reset.scss";
+@import "./themes/light.scss";
+@import "./themes/dark.scss";
+
 *,
 *::before,
 *::after {
@@ -6,5 +11,6 @@
 
 body {
   margin: 0;
-  font: 400 16px/18px "Times New Roman", sans-serif;
+  font: var(--font-main);
+  min-height: 100vh;
 }
