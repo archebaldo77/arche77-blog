@@ -1,6 +1,10 @@
-const path = require("path");
+// packages;
+import path from "path";
 
-module.exports = {
+// types;
+import { type Configuration } from "webpack";
+
+const config: Configuration = {
   mode: `development`,
   entry: path.resolve(__dirname, `src`, `index.ts`),
   output: {
@@ -20,3 +24,5 @@ module.exports = {
     extensions: [`.tsx`, `.ts`, `.js`],
   },
 };
+
+export default config;
