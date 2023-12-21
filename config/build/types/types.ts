@@ -9,4 +9,5 @@ export interface BuildPathsType {
 export interface BuildOptionsType {
   mode: BuildModeType;
   paths: BuildPathsType;
+  port: number;
 }

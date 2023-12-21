@@ -19,6 +19,7 @@ const paths: BuildPathsType = {
 const options: BuildOptionsType = {
   mode: `development`,
   paths,
+  port: 3000,
 };
 
 const config = buildWebpack(options);
