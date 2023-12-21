@@ -7,13 +7,13 @@ import { MainLazy } from "../../pages/main/main.lazy";
 import { AboutLazy } from "../../pages/about/about.lazy";
 
 // functions;
-import { ThemeContext } from "../../themes/theme-context";
+import { useTheme } from "../../themes/use-theme";
 
 // styles;
 import cls from "./app.module.scss";
 
 export const App = () => {
-  const { theme, toggleTheme } = useContext(ThemeContext);
+  const [theme, toggleTheme] = useTheme();
 
   return (
     <div className={`${cls.app} ${theme}`}>
