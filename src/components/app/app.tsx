@@ -1,27 +1,19 @@
 // packages;
-import { Suspense, useState } from "react";
+import { Suspense, useContext } from "react";
 import { Routes, Route, Link } from "react-router-dom";
 
 // pages;
 import { MainLazy } from "../../pages/main/main.lazy";
 import { AboutLazy } from "../../pages/about/about.lazy";
 
+// functions;
+import { ThemeContext } from "../../themes/theme-context";
+
 // styles;
 import cls from "./app.module.scss";
 
-enum Theme {
-  LIGHT = `light`,
-  DARK = `dark`,
-}
-
 export const App = () => {
-  const [theme, setTheme] = useState<Theme>(Theme.LIGHT);
-
-  const toggleTheme = () => {
-    setTheme((prevTheme) =>
-      prevTheme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT
-    );
-  };
+  const { theme, toggleTheme } = useContext(ThemeContext);
 
   return (
     <div className={`${cls.app} ${theme}`}>
