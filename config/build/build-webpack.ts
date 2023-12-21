@@ -23,7 +23,7 @@ export const buildWebpack = (options: BuildOptionsType): Configuration => {
     },
     plugins: buildPlugins(options),
     module: {
-      rules: buildLoaders(),
+      rules: buildLoaders(options),
     },
     resolve: buildResolvers(),
     devServer: isDev ? buildDevServer(options) : undefined,
