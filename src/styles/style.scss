@@ -1,0 +1,14 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font: 400 16px/18px "Times New Roman", sans-serif;
+}
+
+.app {
+  color: green;
+}
