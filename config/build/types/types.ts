@@ -11,3 +11,8 @@ export interface BuildOptionsType {
   paths: BuildPathsType;
   port: number;
 }
+
+export interface EnvVariablesType {
+  mode: BuildModeType;
+  port: number;
+}
