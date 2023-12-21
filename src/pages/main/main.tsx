@@ -1,1 +1,3 @@
-export const Main = () => <div>Main Page</div>;
+const Main = () => <div>Main Page</div>;
+
+export default Main;
