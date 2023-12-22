@@ -1,17 +1,17 @@
 // packages;
-import { Suspense, useContext } from "react";
+import { Suspense } from "react";
 import { Routes, Route, Link } from "react-router-dom";
 
 // pages;
-import { MainLazy } from "../../pages/main/main.lazy";
-import { AboutLazy } from "../../pages/about/about.lazy";
+import { MainLazy } from "@/pages/main";
+import { AboutLazy } from "@/pages/about";
 
 // functions;
-import { useTheme } from "../../themes/use-theme";
-import { classNames } from "../../helpers/class-names/class-names";
+import { useTheme } from "@/app/providers";
+import { classNames } from "@/shared";
 
 // styles;
-import cls from "./app.module.scss";
+import cls from "./index.module.scss";
 
 export const App = () => {
   const [theme, toggleTheme] = useTheme();

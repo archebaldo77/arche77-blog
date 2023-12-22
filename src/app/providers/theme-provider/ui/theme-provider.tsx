@@ -2,7 +2,11 @@
 import { useMemo, useState } from "react";
 
 // functions;
-import { ThemeContext, Theme, LOCAL_STORAGE_THEME_KEY } from "./theme-context";
+import {
+  ThemeContext,
+  Theme,
+  LOCAL_STORAGE_THEME_KEY,
+} from "../lib/theme-context";
 
 // types;
 import { type PropsWithChildren, FC } from "react";
