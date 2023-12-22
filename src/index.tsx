@@ -6,7 +6,7 @@ import { BrowserRouter } from "react-router-dom";
 import { App } from "@/app";
 
 // functions;
-import { ThemeProvider } from "@/app/providers";
+import { ThemeProvider } from "@/app/providers/theme-provider";
 
 // styles;
 import "@/app/styles/style.scss";
