@@ -6,6 +6,9 @@ import { Theme } from "@/app/providers/theme-provider";
 // components;
 import { Button, ButtonTheme } from "@/shared/ui";
 
+// icons;
+import { LightThemeIcon, DarkThemeIcon } from "@/shared/assets";
+
 // styles;
 import cls from "./theme-switcher.module.scss";
 
@@ -24,7 +27,11 @@ export const ThemeSwitcher = (props: ThemeSwitcherProps) => {
       theme={ButtonTheme.CLEAR}
       onClick={toggleTheme}
     >
-      {theme === Theme.LIGHT ? `to Dark` : `to Light`}
+      {theme === Theme.LIGHT ? (
+        <DarkThemeIcon width={50} height={50} />
+      ) : (
+        <LightThemeIcon width={50} height={50} />
+      )}
     </Button>
   );
 };
