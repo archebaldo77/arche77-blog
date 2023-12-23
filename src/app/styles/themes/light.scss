@@ -1,4 +1,10 @@
 .light {
-  background-color: var(--bg-color-light);
-  color: var(--primary-color-light);
+  --bg-color: #f3f0ff;
+  --inverted-bg-color: #161a1d;
+
+  --primary-color: #1c2b41;
+  --secondary-color: #2900ff;
+
+  --inverted-primary-color: #b8acf6;
+  --inverted-secondary-color: #42b2d7;
 }

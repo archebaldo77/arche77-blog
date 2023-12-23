@@ -1,9 +1,5 @@
 .app {
+  background-color: var(--bg-color);
+  color: var(--primary-color);
   min-height: 100vh;
-}
-
-.links {
-  display: flex;
-  column-gap: 5px;
-  margin-bottom: 10px;
 }

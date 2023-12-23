@@ -1,4 +1,10 @@
 .dark {
-  background-color: var(--bg-color-dark);
-  color: var(--primary-color-dark);
+  --bg-color: #161a1d;
+  --inverted-bg-color: #f3f0ff;
+
+  --primary-color: #b8acf6;
+  --secondary-color: #42b2d7;
+
+  --inverted-primary-color: #1c2b41;
+  --inverted-secondary-color: #2900ff;
 }
