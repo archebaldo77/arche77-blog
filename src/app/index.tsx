@@ -8,16 +8,24 @@ import cls from "./index.module.scss";
 // components;
 import { Header } from "@/widgets/header";
 import { AppRouter } from "@/app/providers/app-router";
-import { ThemeSwitcher } from "@/widgets/theme-switcher";
+import { Sidebar } from "@/widgets/sidebar";
 
-export const App = () => {
-  const [theme, toggleTheme] = useTheme();
+interface AppProps {
+  className?: string;
+}
+
+export const App = (props: AppProps) => {
+  const [theme] = useTheme();
+
+  const { className } = props;
 
   return (
-    <div className={classNames(cls.app, {}, [theme])}>
+    <div className={classNames(cls.app, {}, [theme, className])}>
       <Header />
-      <AppRouter />
-      <ThemeSwitcher />
+      <div className={classNames(cls[`app-content`])}>
+        <Sidebar />
+        <AppRouter />
+      </div>
     </div>
   );
 };
