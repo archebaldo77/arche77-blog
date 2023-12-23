@@ -6,8 +6,9 @@ import { classNames } from "@/shared/lib";
 import cls from "./index.module.scss";
 
 // components;
-import { AppRouter } from "@/app/providers/app-router";
 import { Header } from "@/widgets/header";
+import { AppRouter } from "@/app/providers/app-router";
+import { ThemeSwitcher } from "@/widgets/theme-switcher";
 
 export const App = () => {
   const [theme, toggleTheme] = useTheme();
@@ -16,7 +17,7 @@ export const App = () => {
     <div className={classNames(cls.app, {}, [theme])}>
       <Header />
       <AppRouter />
-      <button onClick={toggleTheme}>Toggle Theme</button>
+      <ThemeSwitcher />
     </div>
   );
 };
