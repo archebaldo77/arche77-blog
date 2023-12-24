@@ -1,3 +1,6 @@
+// packages;
+import { useTranslation } from "react-i18next";
+
 // functions;
 import { classNames } from "@/shared/lib";
 
@@ -12,15 +15,17 @@ interface HeaderProps {
 }
 
 export const Header = (props: HeaderProps) => {
+  const { t } = useTranslation();
+
   const { className } = props;
 
   return (
     <div className={classNames(cls.header, {}, [className])}>
       <AppLink to="/" theme={AppLinkTheme.SECONDARY}>
-        Main page
+        {t(`Главная страница`)}
       </AppLink>
       <AppLink to="/about" theme={AppLinkTheme.SECONDARY}>
-        About page
+        {t(`О нас`)}
       </AppLink>
     </div>
   );

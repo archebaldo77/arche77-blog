@@ -1,3 +1,6 @@
+// packages;
+import { useTranslation } from "react-i18next";
+
 // functions;
 import { classNames } from "@/shared/lib";
 
@@ -9,10 +12,12 @@ interface AboutProps {
 }
 
 const About = (props: AboutProps) => {
+  const { t } = useTranslation(`about`);
+
   const { className } = props;
 
   return (
-    <div className={classNames(cls.about, {}, [className])}>About page</div>
+    <div className={classNames(cls.about, {}, [className])}>{t(`О нас`)}</div>
   );
 };
 

@@ -6,6 +6,7 @@ import { classNames } from "@/shared/lib";
 
 // components;
 import { ThemeSwitcher } from "@/widgets/theme-switcher";
+import { LangSwitcher } from "@/widgets/lang-switcher";
 
 // styles;
 import cls from "./sidebar.module.scss";
@@ -31,6 +32,7 @@ export const Sidebar = (props: SidebarProps) => {
     >
       <button onClick={onToggle}>Toggle</button>
       <ThemeSwitcher />
+      <LangSwitcher />
     </div>
   );
 };

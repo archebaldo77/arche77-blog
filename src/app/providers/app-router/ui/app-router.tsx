@@ -6,7 +6,7 @@ import { Routes, Route } from "react-router-dom";
 import { classNames } from "@/shared/lib";
 
 // config
-import { RouteConfig } from "@/shared/config/router/router";
+import { RouteConfig } from "@/shared/config";
 
 // styles;
 import cls from "./app-router.module.scss";

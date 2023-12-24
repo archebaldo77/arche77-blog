@@ -1,7 +1,6 @@
 // functions;
-import { useTheme } from "@/app/providers/theme-provider";
+import { useTheme, Theme } from "@/app/providers/theme-provider";
 import { classNames } from "@/shared/lib";
-import { Theme } from "@/app/providers/theme-provider";
 
 // components;
 import { Button, ButtonTheme } from "@/shared/ui";

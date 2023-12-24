@@ -8,6 +8,9 @@ import { App } from "@/app";
 // functions;
 import { ThemeProvider } from "@/app/providers/theme-provider";
 
+// configs;
+import "@/shared/config";
+
 // styles;
 import "@/app/styles/style.scss";
 
