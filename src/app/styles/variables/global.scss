@@ -11,7 +11,9 @@
   --font-weight-m: 400;
   --font-weight-l: 700;
 
-  --font-main: var(--font-weight-m) var(--font-size-m) / var(--font-line-m)
+  --font-m: var(--font-weight-m) var(--font-size-m) / var(--font-line-m)
+    var(--font-family);
+  --font-l: var(--font-weight-l) var(--font-size-l) / var(--font-line-l)
     var(--font-family);
 
   // sizes;
