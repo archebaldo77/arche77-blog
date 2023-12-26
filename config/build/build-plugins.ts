@@ -1,12 +1,12 @@
 // plugins;
-import HtmlWebpackPlugin from "html-webpack-plugin";
-import MiniCssExtractPlugin from "mini-css-extract-plugin";
-import { ProgressPlugin, DefinePlugin } from "webpack";
-import ReactRefreshWebpackPlugin from "@pmmmwh/react-refresh-webpack-plugin";
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import { ProgressPlugin, DefinePlugin } from 'webpack';
+import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 
 // types;
-import { type WebpackPluginInstance } from "webpack";
-import { type BuildOptionsType } from "./types/types";
+import { type WebpackPluginInstance } from 'webpack';
+import { type BuildOptionsType } from './types/types';
 
 export const buildPlugins = (
   options: BuildOptionsType
@@ -25,6 +25,6 @@ export const buildPlugins = (
       filename: `css/[name].[contenthash:8].css`,
       chunkFilename: `css/[name].[contenthash:8].css`,
     }),
-    isDev && new ReactRefreshWebpackPlugin(),
+    new ReactRefreshWebpackPlugin(),
   ];
 };
