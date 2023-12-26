@@ -13,9 +13,10 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["react"],
+  "plugins": ["react", "i18next"],
   "rules": {
     "react/no-deprecated": 1,
-    "@typescript-eslint/naming-convention": 1
+    "@typescript-eslint/naming-convention": 1,
+    "i18next/no-literal-string": 2
   }
 }
