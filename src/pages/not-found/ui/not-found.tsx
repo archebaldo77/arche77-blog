@@ -1,23 +1,23 @@
 // packages;
-import { useTranslation } from "react-i18next";
+import { useTranslation } from 'react-i18next';
 
 // functions;
-import { classNames } from "@/shared/lib";
+import { classNames } from '@/shared/lib';
 
 // styles;
-import cls from "./not-found.module.scss";
+import cls from './not-found.module.scss';
 
 interface NotFoundProps {
   className?: string;
 }
 
-export const NotFound = (props: NotFoundProps) => {
+export const NotFound = (props: NotFoundProps): JSX.Element => {
   const { t } = useTranslation();
 
   const { className } = props;
 
   return (
-    <div className={classNames(cls["not-found"], {}, [className])}>
+    <div className={classNames(cls['not-found'], {}, [className ?? ``])}>
       {t(`Страница не найдена`)}
     </div>
   );

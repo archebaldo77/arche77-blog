@@ -1,10 +1,10 @@
 // pages;
-import { AboutLazy } from "@/pages/about";
-import { MainLazy } from "@/pages/main";
-import { NotFound } from "@/pages/not-found";
+import { AboutLazy } from '@/pages/about';
+import { MainLazy } from '@/pages/main';
+import { NotFound } from '@/pages/not-found';
 
 // types;
-import { type RouteProps } from "react-router-dom";
+import { type RouteProps } from 'react-router-dom';
 
 enum AppRoute {
   MAIN = `main`,

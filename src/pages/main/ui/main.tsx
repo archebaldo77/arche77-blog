@@ -1,23 +1,23 @@
 // packages;
-import { useTranslation } from "react-i18next";
+import { useTranslation } from 'react-i18next';
 
 // functions;
-import cls from "./main.module.scss";
+import cls from './main.module.scss';
 
 // styles;
-import { classNames } from "@/shared/lib";
+import { classNames } from '@/shared/lib';
 
 interface MainProps {
   className?: string;
 }
 
-const Main = (props: MainProps) => {
+const Main = (props: MainProps): JSX.Element => {
   const { t } = useTranslation(`main`);
 
   const { className } = props;
 
   return (
-    <div className={classNames(cls.main, {}, [className])}>
+    <div className={classNames(cls.main, {}, [className ?? ``])}>
       {t(`Главная страница`)}
     </div>
   );

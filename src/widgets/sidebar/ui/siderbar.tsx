@@ -1,33 +1,33 @@
 // packages;
-import { useState } from "react";
+import { useState } from 'react';
 
 // functions;
-import { classNames } from "@/shared/lib";
+import { classNames } from '@/shared/lib';
 
 // components;
-import { ThemeSwitcher } from "@/widgets/theme-switcher";
-import { LangSwitcher } from "@/widgets/lang-switcher";
+import { ThemeSwitcher } from '@/widgets/theme-switcher';
+import { LangSwitcher } from '@/widgets/lang-switcher';
 
 // styles;
-import cls from "./sidebar.module.scss";
+import cls from './sidebar.module.scss';
 
 interface SidebarProps {
   className?: string;
 }
 
-export const Sidebar = (props: SidebarProps) => {
+export const Sidebar = (props: SidebarProps): JSX.Element => {
   const [collapsed, setCollapsed] = useState(false);
 
   const { className } = props;
 
-  const onToggle = () => {
+  const onToggle = (): void => {
     setCollapsed((prevCollapsed) => !prevCollapsed);
   };
 
   return (
     <div
       className={classNames(cls.sidebar, { [cls.collapsed]: collapsed }, [
-        className,
+        className ?? ``,
       ])}
     >
       <button onClick={onToggle}>Toggle</button>

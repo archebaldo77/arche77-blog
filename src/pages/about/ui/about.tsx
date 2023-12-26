@@ -1,23 +1,25 @@
 // packages;
-import { useTranslation } from "react-i18next";
+import { useTranslation } from 'react-i18next';
 
 // functions;
-import { classNames } from "@/shared/lib";
+import { classNames } from '@/shared/lib';
 
 // styles;
-import cls from "./about.module.scss";
+import cls from './about.module.scss';
 
 interface AboutProps {
   className?: string;
 }
 
-const About = (props: AboutProps) => {
+const About = (props: AboutProps): JSX.Element => {
   const { t } = useTranslation(`about`);
 
   const { className } = props;
 
   return (
-    <div className={classNames(cls.about, {}, [className])}>{t(`О нас`)}</div>
+    <div className={classNames(cls.about, {}, [className ?? ``])}>
+      {t(`О нас`)}
+    </div>
   );
 };
 

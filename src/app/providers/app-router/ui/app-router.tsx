@@ -1,20 +1,20 @@
 // packages;
-import { Suspense } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Suspense } from 'react';
+import { Routes, Route } from 'react-router-dom';
 
 // functions;
-import { classNames } from "@/shared/lib";
+import { classNames } from '@/shared/lib';
 
 // config
-import { RouteConfig } from "@/shared/config";
+import { RouteConfig } from '@/shared/config';
 
 // components;
-import { PageLoader } from "@/widgets/page-loader";
+import { PageLoader } from '@/widgets/page-loader';
 
 // styles;
-import cls from "./app-router.module.scss";
+import cls from './app-router.module.scss';
 
-export const AppRouter = () => {
+export const AppRouter = (): JSX.Element => {
   return (
     <div className={classNames(cls.page)}>
       <Suspense fallback={<PageLoader />}>

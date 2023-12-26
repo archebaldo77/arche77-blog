@@ -1,18 +1,18 @@
 // packages;
-import { render } from "react-dom";
-import { BrowserRouter } from "react-router-dom";
+import { render } from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
 
 // components;
-import { App } from "@/app";
+import { App } from '@/app';
 
 // functions;
-import { ThemeProvider } from "@/app/providers/theme-provider";
+import { ThemeProvider } from '@/app/providers/theme-provider';
 
 // configs;
-import "@/shared/config";
+import '@/shared/config';
 
 // styles;
-import "@/app/styles/style.scss";
+import '@/app/styles/style.scss';
 
 render(
   <BrowserRouter>
