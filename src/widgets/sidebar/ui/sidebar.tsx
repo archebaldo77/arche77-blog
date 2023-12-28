@@ -1,5 +1,6 @@
 // packages;
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 // functions;
 import { classNames } from '@/shared/lib';
@@ -16,6 +17,7 @@ interface SidebarProps {
 }
 
 export const Sidebar = (props: SidebarProps): JSX.Element => {
+  const { t } = useTranslation();
   const [collapsed, setCollapsed] = useState(false);
 
   const { className } = props;
@@ -30,7 +32,7 @@ export const Sidebar = (props: SidebarProps): JSX.Element => {
         className ?? ``,
       ])}
     >
-      <button onClick={onToggle}>Toggle</button>
+      <button onClick={onToggle}>{collapsed ? t(`>`) : t(`<`)}</button>
       <ThemeSwitcher />
       <LangSwitcher />
     </div>

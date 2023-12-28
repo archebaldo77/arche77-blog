@@ -1,5 +1,7 @@
 {
   "Главная страница": "Main page",
   "О нас": "About page",
-  "Страница не найдена": "Not Found Page"
+  "Страница не найдена": "Not Found Page",
+  "Произошла ошибка": "An error has occurred",
+  "Попробуйте перезагрузить страницу": "Try to reload the page"
 }
