@@ -3,6 +3,7 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { ProgressPlugin, DefinePlugin } from 'webpack';
 import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
+import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 
 // types;
 import { type WebpackPluginInstance } from 'webpack';
@@ -26,5 +27,6 @@ export const buildPlugins = (
       chunkFilename: `css/[name].[contenthash:8].css`,
     }),
     new ReactRefreshWebpackPlugin(),
+    new BundleAnalyzerPlugin({ openAnalyzer: false }),
   ];
 };
