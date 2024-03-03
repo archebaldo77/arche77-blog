@@ -15,7 +15,7 @@ const paths: BuildPaths = {
 };
 
 export default (env: BuildEnv): Configuration => {
-  const { mode = `development` } = env;
+  const { mode = `development`, port = 3000 } = env;
 
-  return buildWebpackConfig({ paths, mode });
+  return buildWebpackConfig({ paths, mode, port });
 };
