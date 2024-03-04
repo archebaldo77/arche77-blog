@@ -17,7 +17,8 @@ export const buildWebpackConfig = (options: BuildOptions): Configuration => {
     mode,
     entry: paths.entry,
     output: {
-      filename: `[name].[contenthash:8].js`,
+      filename: `js/[name].[contenthash:8].js`,
+      chunkFilename: `js/chunks/[name].[contenthash:8].js`,
       path: paths.output,
       clean: true,
     },

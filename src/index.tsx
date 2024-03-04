@@ -1,7 +1,15 @@
+// libs;
 import { render } from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
 
+// components;
 import { App } from './components/app/app';
 
 import './style.scss';
 
-render(<App />, document.getElementById(`root`));
+render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>,
+  document.getElementById(`root`)
+);

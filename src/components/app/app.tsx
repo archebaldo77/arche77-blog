@@ -1,13 +1,26 @@
+// libs
+import { Suspense } from 'react';
+import { Routes, Route, Link } from 'react-router-dom';
+
 // pages;
-import { Main } from '../main/main';
+import { MainPageLazy } from '../../pages/main/main.lazy';
+import { AboutPageLazy } from '../../pages/about/about.lazy';
 
 import classes from './app.module.scss';
 
 export const App = (): JSX.Element => {
   return (
-    <div className={classes.app}>
-      <p>Hello world</p>
-      <Main />
+    <div>
+      <header className={classes.header}>
+        <Link to={`/`}>Main page</Link>
+        <Link to={`/about`}>About page</Link>
+      </header>
+      <Suspense fallback='Loading...'>
+        <Routes>
+          <Route path='/' element={<MainPageLazy />} />
+          <Route path='/about' element={<AboutPageLazy />} />
+        </Routes>
+      </Suspense>
     </div>
   );
 };
