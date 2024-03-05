@@ -9,17 +9,23 @@ import { AboutPageLazy } from '../../pages/about/about.lazy';
 // hooks;
 import { useTheme } from '../../themes/use-theme';
 
+// helpers;
+import { classNames } from '../../helpers/class-names';
+
 import classes from './app.module.scss';
 
 export const App = (): JSX.Element => {
   const [theme, toggleTheme] = useTheme();
 
   return (
-    <div className={`${classes.app} ${theme}`}>
-      <header className={classes.header}>
+    <div className={classNames(classes.app, {}, [theme])}>
+      <header className={classNames(classes.header)}>
         <Link to={`/`}>Main page</Link>
         <Link to={`/about`}>About page</Link>
-        <button className={classes[`toggle-theme`]} onClick={toggleTheme}>
+        <button
+          className={classNames(classes[`toggle-theme`])}
+          onClick={toggleTheme}
+        >
           Toggle theme
         </button>
       </header>
