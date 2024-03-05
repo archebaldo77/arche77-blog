@@ -1,14 +1,19 @@
 .app {
   height: 100vh;
-  color: #fff;
-  background-color: black;
+  background-color: var(--bg-color);
+  color: var(--primary-color);
 }
 
 .header {
   display: flex;
   column-gap: 10px;
-  font-size: 16px;
-  line-height: 20px;
-  text-decoration: none;
-  color: red;
+
+  & a {
+    color: var(--secondary-color);
+    text-decoration: none;
+  }
+}
+
+.toggle-theme {
+  margin-left: auto;
 }
