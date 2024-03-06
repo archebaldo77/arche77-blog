@@ -1,12 +1,8 @@
 // libs
-import { Suspense } from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-// pages;
-import { MainPage } from '@/pages/main';
-import { AboutPage } from '@/pages/about';
-
-// hooks;
+// providers;
+import { AppRouter } from '@/app/providers/router-provider';
 import { useTheme } from '@/app/providers/theme-provider';
 
 // helpers;
@@ -30,12 +26,7 @@ export const App = (): JSX.Element => {
           Toggle theme
         </button>
       </header>
-      <Suspense fallback='Loading...'>
-        <Routes>
-          <Route path='/' element={<MainPage />} />
-          <Route path='/about' element={<AboutPage />} />
-        </Routes>
-      </Suspense>
+      <AppRouter />
     </div>
   );
 };
