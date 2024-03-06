@@ -3,14 +3,14 @@ import { Suspense } from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 
 // pages;
-import { MainPageLazy } from '../../pages/main/main.lazy';
-import { AboutPageLazy } from '../../pages/about/about.lazy';
+import { MainPage } from '../../../pages/main';
+import { AboutPage } from '../../../pages/about';
 
 // hooks;
-import { useTheme } from '../../themes/use-theme';
+import { useTheme } from '../../providers/theme-provider/lib/use-theme';
 
 // helpers;
-import { classNames } from '../../helpers/class-names';
+import { classNames } from '../../../shared/lib';
 
 import classes from './app.module.scss';
 
@@ -31,8 +31,8 @@ export const App = (): JSX.Element => {
       </header>
       <Suspense fallback='Loading...'>
         <Routes>
-          <Route path='/' element={<MainPageLazy />} />
-          <Route path='/about' element={<AboutPageLazy />} />
+          <Route path='/' element={<MainPage />} />
+          <Route path='/about' element={<AboutPage />} />
         </Routes>
       </Suspense>
     </div>

@@ -1,5 +1,5 @@
 // helpers;
-import { classNames } from '../../helpers/class-names';
+import { classNames } from '../../../shared/lib';
 
 import classes from './main.module.scss';
 

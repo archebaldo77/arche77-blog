@@ -3,12 +3,12 @@ import { render } from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 
 // components;
-import { App } from './components/app/app';
+import { App } from './app/ui/';
 
 // providers;
-import { ThemeProvider } from './themes/theme-provider';
+import { ThemeProvider } from './app/providers/theme-provider/ui/theme-provider';
 
-import './styles/style.scss';
+import './app/styles/style.scss';
 
 render(
   <BrowserRouter>
