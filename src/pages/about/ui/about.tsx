@@ -1,6 +1,7 @@
 // helpers;
-import { classNames } from '../../../shared/lib';
+import { classNames } from '@/shared/lib';
 
+// styles;
 import classes from './about.module.scss';
 
 const AboutPage = () => (

@@ -1,5 +1,7 @@
+// libs;
 import { useContext } from 'react';
 
+// helpers;
 import { ThemeContext, Theme, LOCAL_STORAGE_THEME_KEY } from './theme-context';
 
 type UseThemeResult = [theme: Theme, toggleTheme: () => void];

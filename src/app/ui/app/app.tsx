@@ -3,15 +3,16 @@ import { Suspense } from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 
 // pages;
-import { MainPage } from '../../../pages/main';
-import { AboutPage } from '../../../pages/about';
+import { MainPage } from '@/pages/main';
+import { AboutPage } from '@/pages/about';
 
 // hooks;
-import { useTheme } from '../../providers/theme-provider/lib/use-theme';
+import { useTheme } from '@/app/providers/theme-provider';
 
 // helpers;
-import { classNames } from '../../../shared/lib';
+import { classNames } from '@/shared/lib';
 
+// styles;
 import classes from './app.module.scss';
 
 export const App = (): JSX.Element => {
