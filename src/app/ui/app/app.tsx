@@ -1,9 +1,9 @@
-// libs
-import { Link } from 'react-router-dom';
-
 // providers;
 import { AppRouter } from '@/app/providers/router-provider';
 import { useTheme } from '@/app/providers/theme-provider';
+
+// widgets;
+import { Header } from '@/widgets/header';
 
 // helpers;
 import { classNames } from '@/shared/lib';
@@ -16,16 +16,7 @@ export const App = (): JSX.Element => {
 
   return (
     <div className={classNames(classes.app, {}, [theme])}>
-      <header className={classNames(classes.header)}>
-        <Link to={`/`}>Main page</Link>
-        <Link to={`/about`}>About page</Link>
-        <button
-          className={classNames(classes[`toggle-theme`])}
-          onClick={toggleTheme}
-        >
-          Toggle theme
-        </button>
-      </header>
+      <Header toggleTheme={toggleTheme} />
       <AppRouter />
     </div>
   );

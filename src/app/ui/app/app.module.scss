@@ -3,17 +3,3 @@
   background-color: var(--bg-color);
   color: var(--primary-color);
 }
-
-.header {
-  display: flex;
-  column-gap: 10px;
-
-  & a {
-    color: var(--secondary-color);
-    text-decoration: none;
-  }
-}
-
-.toggle-theme {
-  margin-left: auto;
-}
