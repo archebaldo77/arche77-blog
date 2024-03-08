@@ -4,11 +4,6 @@
   column-gap: 10px;
   height: var(--header-height);
   background-color: var(--inverted-bg-color);
-
-  & a {
-    color: var(--secondary-color);
-    text-decoration: none;
-  }
 }
 
 .toggle-theme {

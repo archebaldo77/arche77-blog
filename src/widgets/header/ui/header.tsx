@@ -1,5 +1,5 @@
-// libs;
-import { Link } from 'react-router-dom';
+// shared;
+import { AppLink } from '@/shared/ui';
 
 // helpers;
 import { classNames } from '@/shared/lib';
@@ -17,8 +17,8 @@ export const Header = (props: HeaderProps): JSX.Element => {
 
   return (
     <header className={classNames(classes[`header`], {}, [className])}>
-      <Link to={`/`}>Main page</Link>
-      <Link to={`/about`}>About page</Link>
+      <AppLink to={`/`}>Main page</AppLink>
+      <AppLink to={`/about`}>About page</AppLink>
       <button
         className={classNames(classes[`toggle-theme`])}
         onClick={toggleTheme}
