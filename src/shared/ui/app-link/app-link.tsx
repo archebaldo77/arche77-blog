@@ -26,6 +26,7 @@ export const AppLink: FC<AppLinkProps> = (props): JSX.Element => {
     theme = AppLinkTheme.SECONDARY,
     to,
     children,
+    ...restProps
   } = props;
 
   return (
@@ -35,6 +36,7 @@ export const AppLink: FC<AppLinkProps> = (props): JSX.Element => {
         className,
         classes[theme],
       ])}
+      {...restProps}
     >
       {children}
     </Link>

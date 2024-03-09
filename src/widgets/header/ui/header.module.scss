@@ -1,11 +1,12 @@
 .header {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  column-gap: 10px;
   height: var(--header-height);
   background-color: var(--inverted-bg-color);
 }
 
-.toggle-theme {
-  margin-left: auto;
+.links {
+  display: flex;
+  column-gap: 10px;
 }

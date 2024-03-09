@@ -12,11 +12,11 @@ import { classNames } from '@/shared/lib';
 import classes from './app.module.scss';
 
 export const App = (): JSX.Element => {
-  const [theme, toggleTheme] = useTheme();
+  const [theme] = useTheme();
 
   return (
     <div className={classNames(classes.app, {}, [theme])}>
-      <Header toggleTheme={toggleTheme} />
+      <Header />
       <AppRouter />
     </div>
   );

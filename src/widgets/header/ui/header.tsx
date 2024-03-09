@@ -1,3 +1,6 @@
+// widgets;
+import { ThemeSwitcher } from '@/widgets/theme-switcher';
+
 // shared;
 import { AppLink } from '@/shared/ui';
 
@@ -9,22 +12,18 @@ import classes from './header.module.scss';
 
 interface HeaderProps {
   className?: string;
-  toggleTheme: () => void;
 }
 
 export const Header = (props: HeaderProps): JSX.Element => {
-  const { className = ``, toggleTheme } = props;
+  const { className = `` } = props;
 
   return (
     <header className={classNames(classes[`header`], {}, [className])}>
-      <AppLink to={`/`}>Main page</AppLink>
-      <AppLink to={`/about`}>About page</AppLink>
-      <button
-        className={classNames(classes[`toggle-theme`])}
-        onClick={toggleTheme}
-      >
-        Toggle theme
-      </button>
+      <div className={classNames(classes[`links`])}>
+        <AppLink to={`/`}>Main page</AppLink>
+        <AppLink to={`/about`}>About page</AppLink>
+      </div>
+      <ThemeSwitcher />
     </header>
   );
 };
