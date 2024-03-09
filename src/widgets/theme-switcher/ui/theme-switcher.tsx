@@ -7,6 +7,10 @@ import { Button, ButtonTheme } from '@/shared/ui/';
 // helpers;
 import { classNames } from '@/shared/lib';
 
+// icons;
+import Sun from '@/shared/assets/icons/icon-sun.svg';
+import Moon from '@/shared/assets/icons/icon-moon.svg';
+
 // styles;
 import classes from './theme-switcher.module.scss';
 
@@ -24,7 +28,11 @@ export const ThemeSwitcher = (props: ThemeSwitcherProps): JSX.Element => {
       theme={ButtonTheme.CLEAR}
       onClick={toggleTheme}
     >
-      {theme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT}
+      {theme === Theme.LIGHT ? (
+        <Moon width={50} height={50} />
+      ) : (
+        <Sun width={50} height={50} />
+      )}
     </Button>
   );
 };
