@@ -3,3 +3,13 @@
   background-color: var(--bg-color);
   color: var(--primary-color);
 }
+
+.content {
+  display: flex;
+}
+
+.page {
+  display: flex;
+  width: 100%;
+  padding: 20px;
+}

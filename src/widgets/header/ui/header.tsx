@@ -1,6 +1,3 @@
-// widgets;
-import { ThemeSwitcher } from '@/widgets/theme-switcher';
-
 // shared;
 import { AppLink } from '@/shared/ui';
 
@@ -23,7 +20,6 @@ export const Header = (props: HeaderProps): JSX.Element => {
         <AppLink to={`/`}>Main page</AppLink>
         <AppLink to={`/about`}>About page</AppLink>
       </div>
-      <ThemeSwitcher />
     </header>
   );
 };

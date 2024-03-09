@@ -10,6 +10,7 @@ import { classNames } from '@/shared/lib';
 
 // styles;
 import classes from './app.module.scss';
+import { Sidebar } from '@/widgets/sidebar/sidebar';
 
 export const App = (): JSX.Element => {
   const [theme] = useTheme();
@@ -17,7 +18,12 @@ export const App = (): JSX.Element => {
   return (
     <div className={classNames(classes.app, {}, [theme])}>
       <Header />
-      <AppRouter />
+      <div className={classNames(classes[`content`])}>
+        <Sidebar />
+        <div className={classNames(classes[`page`])}>
+          <AppRouter />
+        </div>
+      </div>
     </div>
   );
 };
