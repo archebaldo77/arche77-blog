@@ -4,13 +4,13 @@ import { useTheme } from '@/app/providers/theme-provider';
 
 // widgets;
 import { Header } from '@/widgets/header';
+import { Sidebar } from '@/widgets/sidebar';
 
 // helpers;
 import { classNames } from '@/shared/lib';
 
 // styles;
 import classes from './app.module.scss';
-import { Sidebar } from '@/widgets/sidebar/sidebar';
 
 export const App = (): JSX.Element => {
   const [theme] = useTheme();
