@@ -4,6 +4,7 @@
   flex-shrink: 0;
   width: var(--sidebar-width);
   height: calc(100vh - var(--header-height));
+  padding-bottom: 50px;
   transition: 0.3s ease width;
   background-color: var(--inverted-bg-color);
 }
@@ -12,7 +13,10 @@
   width: var(--sidebar-width-collapsed);
 }
 
-.theme-switcher {
-  margin: auto;
-  margin-bottom: 50px;
+.switchers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+  margin-top: auto;
 }

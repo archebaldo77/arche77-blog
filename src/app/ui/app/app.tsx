@@ -6,6 +6,9 @@ import { useTheme } from '@/app/providers/theme-provider';
 import { Header } from '@/widgets/header';
 import { Sidebar } from '@/widgets/sidebar';
 
+// config;
+import '@/shared/config/i18n/i18n';
+
 // helpers;
 import { classNames } from '@/shared/lib';
 

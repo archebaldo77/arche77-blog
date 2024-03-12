@@ -6,6 +6,7 @@ import { classNames } from '@/shared/lib';
 
 // widgets;
 import { ThemeSwitcher } from '@/widgets/theme-switcher';
+import { LangSwitcher } from '@/widgets/lang-switcher';
 
 // shared;
 import { Button, ButtonTheme } from '@/shared/ui';
@@ -35,7 +36,10 @@ export const Sidebar = (props: SidebarProps): JSX.Element => {
       >
         {collapsed ? `>` : `<`}
       </Button>
-      <ThemeSwitcher className={classNames(classes[`theme-switcher`])} />
+      <div className={classNames(classes[`switchers`])}>
+        <ThemeSwitcher />
+        <LangSwitcher />
+      </div>
     </div>
   );
 };
