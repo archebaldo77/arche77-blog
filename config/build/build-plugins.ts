@@ -1,6 +1,7 @@
 // libs;
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 import { type Configuration, ProgressPlugin, DefinePlugin } from 'webpack';
 
 // types;
@@ -25,5 +26,6 @@ export const buildPlugins = (
     new DefinePlugin({
       __IS_DEV__: JSON.stringify(isDev),
     }),
+    new ReactRefreshWebpackPlugin(),
   ];
 };
