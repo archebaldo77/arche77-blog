@@ -1,3 +1,6 @@
+// libs;
+import { useTranslation } from 'react-i18next';
+
 // helpers;
 import { classNames } from '@/shared/lib';
 
@@ -9,11 +12,12 @@ interface NotFoundProps {
 }
 
 export const NotFound = (props: NotFoundProps): JSX.Element => {
+  const { t } = useTranslation(`pages/not-found`);
   const { className = `` } = props;
 
   return (
     <div className={classNames(classes[`not-found`], {}, [className])}>
-      Page Not Found
+      {t(`Страница не найдена`)}
     </div>
   );
 };
