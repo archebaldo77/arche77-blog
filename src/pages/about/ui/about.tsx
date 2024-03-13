@@ -7,7 +7,7 @@ import { classNames } from '@/shared/lib';
 // styles;
 import classes from './about.module.scss';
 
-const AboutPage = () => {
+const AboutPage = (): JSX.Element => {
   const { t } = useTranslation(`pages/about`);
 
   return <h2 className={classNames(classes.about)}>{t(`О нас`)}</h2>;

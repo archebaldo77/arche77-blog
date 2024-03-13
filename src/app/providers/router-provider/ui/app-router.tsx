@@ -8,12 +8,16 @@ import { PageLoader } from '@/widgets/page-loader';
 // config;
 import { routesConfig } from '../config/app-router';
 
-export const AppRouter = () => {
+export const AppRouter = (): JSX.Element => {
   return (
     <Suspense fallback={<PageLoader />}>
       <Routes>
         {Object.values(routesConfig).map(({ path, element }) => (
-          <Route key={path} path={path} element={element} />
+          <Route
+            key={path}
+            path={path}
+            element={element}
+          />
         ))}
       </Routes>
     </Suspense>

@@ -18,8 +18,8 @@ export const LangSwitcher = (props: LangSwitcherProps): JSX.Element => {
   const { i18n, t } = useTranslation();
   const { className = `` } = props;
 
-  const toggleLang = () => {
-    i18n.changeLanguage(i18n.language === `ru` ? `en` : `ru`);
+  const toggleLang = (): void => {
+    void i18n.changeLanguage(i18n.language === `ru` ? `en` : `ru`);
   };
 
   return (
