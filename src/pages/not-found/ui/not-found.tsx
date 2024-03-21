@@ -16,7 +16,10 @@ export const NotFound = (props: NotFoundProps): JSX.Element => {
   const { className = `` } = props;
 
   return (
-    <div className={classNames(classes[`not-found`], {}, [className])}>
+    <div
+      data-testid="not-found"
+      className={classNames(classes[`not-found`], {}, [className])}
+    >
       {t(`Страница не найдена`)}
     </div>
   );

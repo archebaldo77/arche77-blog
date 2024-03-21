@@ -10,7 +10,14 @@ import classes from './about.module.scss';
 const AboutPage = (): JSX.Element => {
   const { t } = useTranslation(`pages/about`);
 
-  return <h2 className={classNames(classes.about)}>{t(`О нас`)}</h2>;
+  return (
+    <h2
+      data-testid="about"
+      className={classNames(classes.about)}
+    >
+      {t(`О нас`)}
+    </h2>
+  );
 };
 
 export default AboutPage;

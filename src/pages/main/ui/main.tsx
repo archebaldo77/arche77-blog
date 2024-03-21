@@ -10,7 +10,14 @@ import classes from './main.module.scss';
 const MainPage = (): JSX.Element => {
   const { t } = useTranslation(`pages/main`);
 
-  return <h2 className={classNames(classes.main)}>{t(`Главная страница`)}</h2>;
+  return (
+    <h2
+      data-testid="main"
+      className={classNames(classes.main)}
+    >
+      {t(`Главная страница`)}
+    </h2>
+  );
 };
 
 export default MainPage;
