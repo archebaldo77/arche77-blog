@@ -11,5 +11,10 @@ interface LoaderProps {
 export const Loader = (props: LoaderProps): JSX.Element => {
   const { className = `` } = props;
 
-  return <div className={classNames(classes[`loader`], {}, [className])} />;
+  return (
+    <div
+      data-testid="loader"
+      className={classNames(classes[`loader`], {}, [className])}
+    />
+  );
 };

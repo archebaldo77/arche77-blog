@@ -31,6 +31,7 @@ export const AppLink: FC<AppLinkProps> = (props): JSX.Element => {
 
   return (
     <Link
+      data-testid="app-link"
       to={to}
       className={classNames(classes[`app-link`], {}, [
         className,
