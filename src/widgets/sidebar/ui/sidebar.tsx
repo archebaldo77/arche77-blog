@@ -24,6 +24,7 @@ export const Sidebar = (props: SidebarProps): JSX.Element => {
 
   return (
     <div
+      data-testid="sidebar"
       className={classNames(
         classes[`sidebar`],
         { [classes[`collapsed`]]: collapsed },
@@ -31,6 +32,7 @@ export const Sidebar = (props: SidebarProps): JSX.Element => {
       )}
     >
       <Button
+        data-testid="sidebar-toggle"
         onClick={() => {
           setCollapsed((prev) => !prev);
         }}

@@ -24,6 +24,7 @@ export const LangSwitcher = (props: LangSwitcherProps): JSX.Element => {
 
   return (
     <Button
+      data-testid="lang-switcher"
       className={classNames(classes[`lang-switcher`], {}, [className])}
       theme={ButtonTheme.CLEAR}
       onClick={toggleLang}

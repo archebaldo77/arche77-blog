@@ -14,7 +14,10 @@ export const ErrorIndicator = (props: ErrorIndicatorProps): JSX.Element => {
   const { className = `` } = props;
 
   return (
-    <div className={classNames(classes[`error-indicator`], {}, [className])}>
+    <div
+      data-testid="error-indicator"
+      className={classNames(classes[`error-indicator`], {}, [className])}
+    >
       {t(`Ошибка`)}
     </div>
   );

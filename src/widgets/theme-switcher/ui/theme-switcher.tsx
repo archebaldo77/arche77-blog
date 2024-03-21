@@ -24,6 +24,7 @@ export const ThemeSwitcher = (props: ThemeSwitcherProps): JSX.Element => {
 
   return (
     <Button
+      data-testid="theme-switcher"
       className={classNames(classes[`theme-switcher`], {}, [className])}
       theme={ButtonTheme.CLEAR}
       onClick={toggleTheme}

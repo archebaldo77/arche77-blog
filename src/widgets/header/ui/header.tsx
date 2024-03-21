@@ -19,7 +19,10 @@ export const Header = (props: HeaderProps): JSX.Element => {
   const { className = `` } = props;
 
   return (
-    <header className={classNames(classes[`header`], {}, [className])}>
+    <header
+      className={classNames(classes[`header`], {}, [className])}
+      data-testid="header"
+    >
       <div className={classNames(classes[`links`])}>
         <AppLink to={`/`}>{t(`Главная страница`)}</AppLink>
         <AppLink to={`/about`}>{t(`О нас`)}</AppLink>

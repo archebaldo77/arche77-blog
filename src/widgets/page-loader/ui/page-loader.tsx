@@ -15,7 +15,10 @@ export const PageLoader = (props: PageLoaderProps): JSX.Element => {
   const { className = `` } = props;
 
   return (
-    <div className={classNames(classes[`page-loader`], {}, [className])}>
+    <div
+      data-testid="page-loader"
+      className={classNames(classes[`page-loader`], {}, [className])}
+    >
       <Loader />
     </div>
   );
