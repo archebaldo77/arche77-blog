@@ -22,5 +22,13 @@
     "@typescript-eslint/dot-notation": "off",
     "@typescript-eslint/no-non-null-assertion": "off"
   },
-  "ignorePatterns": ["config/**/"]
+  "ignorePatterns": ["config/**/"],
+  "overrides": [
+    {
+      "files": ["src/**/*.test.{ts,tsx}"],
+      "rules": {
+        "i18next/no-literal-string": "off"
+      }
+    }
+  ]
 }

@@ -14,6 +14,9 @@ const config: Config = {
     '^@/(.*)$': `<rootDir>src/$1`,
   },
   setupFilesAfterEnv: [`<rootDir>/config/jest/jest-setup.ts`],
+  globals: {
+    __IS_DEV__: false,
+  },
 };
 
 export default config;
