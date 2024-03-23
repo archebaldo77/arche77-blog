@@ -8,6 +8,7 @@
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
     "plugin:i18next/recommended",
+    "plugin:storybook/recommended",
     "plugin:prettier/recommended"
   ],
   "parserOptions": {
@@ -16,7 +17,12 @@
   },
   "plugins": ["react", "i18next"],
   "rules": {
-    "prettier/prettier": ["error", { "endOfLine": "auto" }],
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ],
     "react/no-deprecated": "warn",
     "@typescript-eslint/naming-convention": "warn",
     "@typescript-eslint/dot-notation": "off",
