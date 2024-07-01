@@ -16,6 +16,8 @@ const paths: BuildPaths = {
   html: path.resolve(__dirname, `public`, `index.html`),
 };
 
-const config = buildWebpackConfig({ mode, paths, isDev });
+const port = 3000;
+
+const config = buildWebpackConfig({ mode, paths, isDev, port });
 
 export default config;
