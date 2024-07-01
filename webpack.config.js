@@ -2,6 +2,7 @@ const path = require('path');
 
 // plugins;
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { ProgressPlugin } = require('webpack');
 
 module.exports = {
   mode: `development`,
@@ -12,6 +13,7 @@ module.exports = {
     clean: true,
   },
   plugins: [
+    new ProgressPlugin(),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, `public`, `index.html`),
       minify: true,
