@@ -1,0 +1,16 @@
+{
+  "name": "arche77-blog",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "keywords": [],
+  "author": "Andrey Zakharov",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "webpack": "5.92.1",
+    "webpack-cli": "5.1.4"
+  }
+}
