@@ -6,7 +6,7 @@ const { ProgressPlugin } = require('webpack');
 
 module.exports = {
   mode: `development`,
-  entry: path.resolve(__dirname, `src`, `index.js`),
+  entry: path.resolve(__dirname, `src`, `index.ts`),
   output: {
     filename: `[name].[contenthash:8].js`,
     path: path.resolve(__dirname, `dist`),
@@ -19,4 +19,16 @@ module.exports = {
       minify: true,
     }),
   ],
+  module: {
+    rules: [
+      {
+        test: /\.tsx?$/,
+        use: `ts-loader`,
+        exclude: /node_modules/,
+      },
+    ],
+  },
+  resolve: {
+    extensions: [`.tsx`, `.ts`, `.js`, `.json`],
+  },
 };
