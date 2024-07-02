@@ -1,27 +1,31 @@
 // libraries;
-import { Suspense, useState } from 'react';
+import { Suspense, useContext, useState } from 'react';
 import { Link, Route, Routes } from 'react-router-dom';
 
 // pages;
 import { MainLazy } from '../../pages/main/main.lazy';
 import { AboutLazy } from '../../pages/about/about.lazy';
 
+// helpers;
+import {
+  LOCAL_STORAGE_THEME_KEY,
+  Theme,
+  ThemeContext,
+} from '../../theme/theme-context';
+
 // styles;
 import classes from './app.module.scss';
 
-enum Theme {
-  LIGHT = `light`,
-  DARK = `dark`,
-}
-
 export const App = () => {
-  const [theme, setTheme] = useState<Theme>(Theme.LIGHT);
+  const { theme, setTheme } = useContext(ThemeContext);
 
   const toggleTheme = () => {
-    setTheme((prevTheme) =>
-      prevTheme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT
-    );
+    const updatedTheme = theme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT;
+
+    localStorage.setItem(LOCAL_STORAGE_THEME_KEY, updatedTheme);
+    setTheme!(updatedTheme);
   };
+
   return (
     <div className={`${classes[`app`]} ${theme}`}>
       <div className={classes[`navigation`]}>
