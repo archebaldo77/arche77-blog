@@ -1,0 +1,15 @@
+@import './helpers/reset.scss';
+@import './variables/global.scss';
+@import './themes//light.scss';
+@import './themes/dark.scss';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font: var(--font-m);
+}
