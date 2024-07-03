@@ -3,12 +3,12 @@ import { Suspense } from 'react';
 import { Link, Route, Routes } from 'react-router-dom';
 
 // pages;
-import { MainLazy } from '../pages/main';
-import { AboutLazy } from '../pages/about';
+import { MainLazy } from '@/pages/main';
+import { AboutLazy } from '@/pages/about';
 
 // helpers;
 import { useTheme } from './providers/theme';
-import { classNames } from '../shared/lib';
+import { classNames } from '@/shared/lib';
 
 // styles;
 import classes from './app.module.scss';
