@@ -1,8 +1,8 @@
-// libraries;
-import { Link } from 'react-router-dom';
-
 // providers;
 import { AppRouter } from '@/app/providers/router';
+
+// widgets;
+import { Header } from '@/widgets/header/ui/header';
 
 // helpers;
 import { useTheme } from './providers/theme';
@@ -12,17 +12,11 @@ import { classNames } from '@/shared/lib';
 import classes from './app.module.scss';
 
 export const App = () => {
-  const [theme, toggleTheme] = useTheme();
+  const [theme] = useTheme();
 
   return (
     <div className={classNames(classes[`app`], {}, [theme])}>
-      <div className={classNames(classes[`navigation`])}>
-        <Link to='/'>Главная</Link>
-        <Link to='/about'>О нас</Link>
-      </div>
-      <button className={classNames(classes[`toggle`])} onClick={toggleTheme!}>
-        Изменить тему
-      </button>
+      <Header />
       <div className={classNames(classes[`page`])}>
         <AppRouter />
       </div>
