@@ -1,9 +1,11 @@
+// widgets;
+import { ThemeSwitcher } from '@/widgets/theme-switcher/';
+
 // shared;
 import { AppLink, AppLinkTheme } from '@/shared/ui';
 
 // helpers;
 import { classNames } from '@/shared/lib';
-import { useTheme } from '@/app/providers/theme';
 
 // styles;
 import classes from './header.module.scss';
@@ -15,8 +17,6 @@ interface HeaderProps {
 export const Header = (props: HeaderProps): JSX.Element => {
   const { className = `` } = props;
 
-  const [, toggleTheme] = useTheme();
-
   return (
     <header className={classNames(classes[`header`], {}, [className])}>
       <div className={classNames(classes[`navigation`])}>
@@ -27,9 +27,7 @@ export const Header = (props: HeaderProps): JSX.Element => {
           О нас
         </AppLink>
       </div>
-      <button className={classNames(classes[`toggle`])} onClick={toggleTheme!}>
-        Изменить тему
-      </button>
+      <ThemeSwitcher />
     </header>
   );
 };
