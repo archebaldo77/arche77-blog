@@ -3,10 +3,14 @@ import { Button, ButtonTheme } from '@/shared/ui';
 
 // helpers;
 import { classNames } from '@/shared/lib';
-import { useTheme } from '@/app/providers/theme';
+import { useTheme, Theme } from '@/app/providers/theme';
 
 // styles;
 import classes from './theme-switcher.module.scss';
+
+// icons;
+import Sun from '@/shared/assets/icons/sun.svg';
+import Moon from '@/shared/assets/icons/moon.svg';
 
 interface ThemeSwitcherProps {
   className?: string;
@@ -15,7 +19,7 @@ interface ThemeSwitcherProps {
 export const ThemeSwitcher = (props: ThemeSwitcherProps): JSX.Element => {
   const { className = `` } = props;
 
-  const [, toggleTheme] = useTheme();
+  const [theme, toggleTheme] = useTheme();
 
   return (
     <Button
@@ -23,7 +27,11 @@ export const ThemeSwitcher = (props: ThemeSwitcherProps): JSX.Element => {
       theme={ButtonTheme.CLEAR}
       onClick={toggleTheme}
     >
-      Изменить тему
+      {theme === Theme.LIGHT ? (
+        <Moon width={40} height={40} />
+      ) : (
+        <Sun width={40} height={40} />
+      )}
     </Button>
   );
 };
