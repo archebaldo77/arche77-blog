@@ -1,7 +1,7 @@
 .sidebar {
   display: flex;
   flex-direction: column;
-  align-content: center;
+  align-items: center;
   flex-shrink: 0;
   width: 300px;
   height: calc(100vh - var(--header-height));
@@ -14,7 +14,7 @@
   width: 80px;
 }
 
-.button {
+.theme-switcher {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,4 +25,12 @@
   padding: 0;
   border: none;
   background-color: transparent;
+}
+
+.lang-switcher {
+  margin-top: auto;
+  background: transparent;
+  padding: 0;
+  border: none;
+  font: var(--font-m);
 }

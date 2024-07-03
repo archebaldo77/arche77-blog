@@ -2,7 +2,7 @@
 import { AppRouter } from '@/app/providers/router';
 
 // widgets;
-import { Header } from '@/widgets/header/ui/header';
+import { Header } from '@/widgets/header';
 import { Sidebar } from '@/widgets/sidebar';
 
 // helpers;

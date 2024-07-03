@@ -1,6 +1,9 @@
 // libraries;
 import { useState } from 'react';
 
+// widgets;
+import { LangSwitcher } from '@/widgets/lang-switcher';
+
 // shared;
 import { Button, ButtonTheme } from '@/shared/ui';
 
@@ -28,12 +31,13 @@ export const Sidebar = (props: SidebarProps): JSX.Element => {
       )}
     >
       <Button
-        className={classNames(classes[`button`])}
+        className={classNames(classes[`theme-switcher`])}
         theme={ButtonTheme.PRIMARY_INVERTED}
         onClick={() => setCollapsed((prevCollapsed) => !prevCollapsed)}
       >
         {collapsed ? `>` : `<`}
       </Button>
+      <LangSwitcher className={classNames(classes[`lang-switcher`])} />
     </div>
   );
 };

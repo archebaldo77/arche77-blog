@@ -1,5 +1,9 @@
+// libraries;
+import { useTranslation } from 'react-i18next';
+
 export const About = () => {
-  return <div>О нас</div>;
+  const { t } = useTranslation(`about`);
+  return <div>{t(`О нас`)}</div>;
 };
 
 export default About;

@@ -1,5 +1,8 @@
+// libraries;
+import { useTranslation } from 'react-i18next';
+
 // widgets;
-import { ThemeSwitcher } from '@/widgets/theme-switcher/';
+import { ThemeSwitcher } from '@/widgets/theme-switcher';
 
 // shared;
 import { AppLink, AppLinkTheme } from '@/shared/ui';
@@ -17,14 +20,16 @@ interface HeaderProps {
 export const Header = (props: HeaderProps): JSX.Element => {
   const { className = `` } = props;
 
+  const { t } = useTranslation();
+
   return (
     <header className={classNames(classes[`header`], {}, [className])}>
       <div className={classNames(classes[`navigation`])}>
         <AppLink to='/' theme={AppLinkTheme.PRIMARY_INVERTED}>
-          Главная
+          {t(`Главная страница`)}
         </AppLink>
         <AppLink to='/about' theme={AppLinkTheme.PRIMARY_INVERTED}>
-          О нас
+          {t(`О нас`)}
         </AppLink>
       </div>
       <ThemeSwitcher />
