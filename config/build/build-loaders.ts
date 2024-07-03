@@ -31,5 +31,16 @@ export const buildLoaders = (options: BuildOptions): ModuleOptions[`rules`] => {
     ],
   };
 
-  return [scssLoader, typescriptLoader];
+  const svgLoader = {
+    test: /\.svg$/i,
+    issuer: /\.[jt]sx?$/,
+    use: [`@svgr/webpack`],
+  };
+
+  const assetsLoader = {
+    test: /\.(png|jpg|gif)$/i,
+    type: 'asset/resource',
+  };
+
+  return [assetsLoader, svgLoader, scssLoader, typescriptLoader];
 };
