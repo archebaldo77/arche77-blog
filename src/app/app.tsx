@@ -1,10 +1,8 @@
 // libraries;
-import { Suspense } from 'react';
-import { Link, Route, Routes } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-// pages;
-import { MainLazy } from '@/pages/main';
-import { AboutLazy } from '@/pages/about';
+// providers;
+import { AppRouter } from '@/app/providers/router';
 
 // helpers;
 import { useTheme } from './providers/theme';
@@ -26,12 +24,7 @@ export const App = () => {
         Изменить тему
       </button>
       <div className={classNames(classes[`page`])}>
-        <Suspense fallback='Loading...'>
-          <Routes>
-            <Route path='/' element={<MainLazy />} />
-            <Route path='/about' element={<AboutLazy />} />
-          </Routes>
-        </Suspense>
+        <AppRouter />
       </div>
     </div>
   );
