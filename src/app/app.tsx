@@ -3,6 +3,7 @@ import { AppRouter } from '@/app/providers/router';
 
 // widgets;
 import { Header } from '@/widgets/header/ui/header';
+import { Sidebar } from '@/widgets/sidebar';
 
 // helpers;
 import { useTheme } from './providers/theme';
@@ -17,8 +18,11 @@ export const App = () => {
   return (
     <div className={classNames(classes[`app`], {}, [theme])}>
       <Header />
-      <div className={classNames(classes[`page`])}>
-        <AppRouter />
+      <div className={classNames(classes[`content`])}>
+        <Sidebar />
+        <div className={classNames(classes[`page-wrapper`])}>
+          <AppRouter />
+        </div>
       </div>
     </div>
   );
