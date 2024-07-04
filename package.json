@@ -7,6 +7,7 @@
     "build:prod": "webpack --env mode=production",
     "build:dev": "webpack --env mode=development",
     "lint:ts": "npx eslint src/**/*.{ts,tsx}",
+    "lint:scss": "npx stylelint src/**/*.scss",
     "prepare": "husky"
   },
   "keywords": [],
@@ -43,6 +44,8 @@
     "sass": "1.77.6",
     "sass-loader": "14.2.1",
     "style-loader": "4.0.0",
+    "stylelint": "^16.6.1",
+    "stylelint-config-standard-scss": "13.1.0",
     "ts-loader": "9.5.1",
     "ts-node": "10.9.2",
     "typescript": "5.5.2",
