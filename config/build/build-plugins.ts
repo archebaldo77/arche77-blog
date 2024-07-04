@@ -2,6 +2,7 @@
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import { ProgressPlugin, DefinePlugin, type Configuration } from 'webpack';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 
 // types;
 import { type BuildOptions } from './types/config';
@@ -24,5 +25,6 @@ export const buildPlugins = (
     new DefinePlugin({
       __IS_DEV__: JSON.stringify(isDev),
     }),
+    new ReactRefreshWebpackPlugin(),
   ];
 };
