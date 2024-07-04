@@ -3,7 +3,7 @@ import { type Configuration } from 'webpack';
 import { type BuildOptions } from './types/config';
 
 export const buildResolvers = (
-  options: BuildOptions
+  options: BuildOptions,
 ): Configuration[`resolve`] => {
   const { paths } = options;
 
