@@ -34,7 +34,9 @@ export const LangSwitcher = (props: LangSwitcherProps): JSX.Element => {
     <Button
       className={classNames(classes[`lang-switcher`], {}, [className])}
       theme={ButtonTheme.PRIMARY_INVERTED}
-      onClick={() => toggleLanguage}
+      onClick={async () => {
+        await toggleLanguage();
+      }}
     >
       {i18n.language === AppLang.RU ? `English` : `Русский`}
     </Button>
