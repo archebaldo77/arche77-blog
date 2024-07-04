@@ -5,9 +5,13 @@ import { BrowserRouter } from 'react-router-dom';
 
 // providers;
 import { ThemeProvider } from '@/app/providers/theme';
+import { ErrorBoundary } from '@/app/providers/error-boundary';
 
 // components;
 import { App } from '@/app/app';
+
+// shared;
+import { Spinner } from '@/shared/ui';
 
 // i18n;
 import '@/shared/config/i18n/i18n';
@@ -18,9 +22,11 @@ import '@/app/styles/style.scss';
 render(
   <BrowserRouter>
     <ThemeProvider>
-      <Suspense fallback="Загрузка...">
-        <App />
-      </Suspense>
+      <ErrorBoundary>
+        <Suspense fallback={<Spinner />}>
+          <App />
+        </Suspense>
+      </ErrorBoundary>
     </ThemeProvider>
   </BrowserRouter>,
   document.getElementById(`root`),
