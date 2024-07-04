@@ -25,10 +25,16 @@ export const Header = (props: HeaderProps): JSX.Element => {
   return (
     <header className={classNames(classes[`header`], {}, [className])}>
       <div className={classNames(classes[`navigation`])}>
-        <AppLink to='/' theme={AppLinkTheme.PRIMARY_INVERTED}>
+        <AppLink
+          to="/"
+          theme={AppLinkTheme.PRIMARY_INVERTED}
+        >
           {t(`Главная страница`)}
         </AppLink>
-        <AppLink to='/about' theme={AppLinkTheme.PRIMARY_INVERTED}>
+        <AppLink
+          to="/about"
+          theme={AppLinkTheme.PRIMARY_INVERTED}
+        >
           {t(`О нас`)}
         </AppLink>
       </div>

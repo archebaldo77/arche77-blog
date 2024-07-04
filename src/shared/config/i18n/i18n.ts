@@ -17,6 +17,9 @@ i18n
     detection: {
       convertDetectedLanguage: (lng) => lng.slice(0, 2),
     },
+  })
+  .catch((error) => {
+    console.log(`i18n error: ${error}`);
   });
 
 export { i18n };

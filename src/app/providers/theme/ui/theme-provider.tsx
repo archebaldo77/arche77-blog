@@ -9,7 +9,7 @@ import {
 } from '../lib/theme-context';
 
 const defaultTheme =
-  (localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as Theme) || Theme.LIGHT;
+  (localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as Theme) ?? Theme.LIGHT;
 
 export const ThemeProvider: FC = (props) => {
   const { children } = props;

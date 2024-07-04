@@ -9,12 +9,12 @@ type UseThemeResult = [Theme, () => void];
 export const useTheme = (): UseThemeResult => {
   const { theme, setTheme } = useContext(ThemeContext);
 
-  const toggleTheme = () => {
+  const toggleTheme = (): void => {
     const updatedTheme = theme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT;
 
     localStorage.setItem(LOCAL_STORAGE_THEME_KEY, updatedTheme);
     setTheme!(updatedTheme);
   };
 
-  return [theme as Theme, toggleTheme as () => void];
+  return [theme!, toggleTheme as () => void];
 };

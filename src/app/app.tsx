@@ -12,7 +12,7 @@ import { classNames } from '@/shared/lib';
 // styles;
 import classes from './app.module.scss';
 
-export const App = () => {
+export const App = (): JSX.Element => {
   const [theme] = useTheme();
 
   return (

@@ -1,4 +1,4 @@
 // libraries;
 import { lazy } from 'react';
 
-export const AboutLazy = lazy(() => import('./about'));
+export const AboutLazy = lazy(async () => await import('./about'));

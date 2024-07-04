@@ -24,17 +24,19 @@ export const LangSwitcher = (props: LangSwitcherProps): JSX.Element => {
 
   const { i18n } = useTranslation();
 
-  const toggleLanguage = () => {
-    i18n.changeLanguage(i18n.language == AppLang.RU ? AppLang.EN : AppLang.RU);
+  const toggleLanguage = async (): Promise<void> => {
+    await i18n.changeLanguage(
+      i18n.language === AppLang.RU ? AppLang.EN : AppLang.RU,
+    );
   };
 
   return (
     <Button
       className={classNames(classes[`lang-switcher`], {}, [className])}
       theme={ButtonTheme.PRIMARY_INVERTED}
-      onClick={toggleLanguage}
+      onClick={() => toggleLanguage}
     >
-      {i18n.language == AppLang.RU ? `English` : `Русский`}
+      {i18n.language === AppLang.RU ? `English` : `Русский`}
     </Button>
   );
 };

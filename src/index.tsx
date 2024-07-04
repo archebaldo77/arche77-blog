@@ -18,10 +18,10 @@ import '@/app/styles/style.scss';
 render(
   <BrowserRouter>
     <ThemeProvider>
-      <Suspense fallback='Загрузка...'>
+      <Suspense fallback="Загрузка...">
         <App />
       </Suspense>
     </ThemeProvider>
   </BrowserRouter>,
-  document.getElementById(`root`)
+  document.getElementById(`root`),
 );
