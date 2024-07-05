@@ -28,4 +28,12 @@
     "@typescript-eslint/no-non-null-assertion": "off",
     "@typescript-eslint/no-misused-promises": "off",
   },
+  "overrides": [
+    {
+      "files": ["src/**/*.test.{ts,tsx}"],
+      "rules": {
+        "i18next/no-literal-string": "off",
+      },
+    },
+  ],
 }

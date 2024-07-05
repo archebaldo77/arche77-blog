@@ -1,3 +1,7 @@
+// libraries;
+import path from 'path';
+
+// types;
 import { type Config } from 'jest';
 
 const config: Config = {
@@ -8,8 +12,11 @@ const config: Config = {
   testPathIgnorePatterns: [`\\\\node_modules\\\\`],
   moduleFileExtensions: [`ts`, `tsx`, `js`, `json`],
   moduleNameMapper: {
+    '\\.s?css$': `identity-obj-proxy`,
+    '\\.(svg)$': path.resolve(__dirname, `jest-svg-mock.tsx`),
     '^@/(.*)$': `<rootDir>/src/$1`,
   },
+  setupFilesAfterEnv: [`<rootDir>/config/jest/jest-setup.ts`],
 };
 
 export default config;
