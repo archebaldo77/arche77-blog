@@ -30,6 +30,7 @@ export const Button: FC<ButtonProps> = (props): JSX.Element => {
     <button
       className={classNames(classes[`button`], {}, [className, classes[theme]])}
       {...otherProps}
+      data-testid="button"
     >
       {children}
     </button>
