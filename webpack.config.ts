@@ -5,9 +5,10 @@ import path from 'path';
 import { buildWebpackConfig } from './config/build/build-webpack-config';
 
 // types;
-import { type BuildPaths, BuildEnv } from './config/build/types/config';
+import { type Configuration } from 'webpack';
+import type { BuildPaths, BuildEnv } from './config/build/types/config';
 
-export default (env: BuildEnv) => {
+export default (env: BuildEnv): Configuration => {
   const mode = env.mode ?? `development`;
   const isDev = mode === `development`;
 
