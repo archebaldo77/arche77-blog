@@ -1,17 +1,6 @@
 .header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   width: 100%;
   height: var(--header-height);
   background-color: var(--bg-color-inverted);
-}
-
-.navigation {
-  display: flex;
-  column-gap: 10px;
-}
-
-.toggle {
-  width: 180px;
 }

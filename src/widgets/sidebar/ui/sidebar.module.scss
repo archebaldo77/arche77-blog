@@ -1,4 +1,5 @@
 .sidebar {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,27 +11,58 @@
   transition: width 0.3s ease-in;
 }
 
+.navigation {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.navigation-item {
+  display: flex;
+  align-items: center;
+  min-height: 36px;
+  column-gap: 10px;
+}
+
+.navigation-link {
+  transition: width 0.3s ease-in;
+  transition-delay: 0.3s;
+}
+
+.navigation-icon {
+  &-home {
+    path {
+      fill: var(--bg-color);
+    }
+  }
+
+  &-about {
+    path {
+      stroke: var(--bg-color);
+    }
+  }
+}
+
 .collapsed {
   width: 80px;
+
+  .navigation-link {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
 }
 
-.theme-switcher {
+.switchers {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  row-gap: 15px;
   align-items: center;
-  font: var(--font-l);
-  width: 30px;
-  height: 30px;
-  align-self: flex-end;
-  padding: 0;
-  border: none;
-  background-color: transparent;
+  margin-top: auto;
 }
 
-.lang-switcher {
-  margin-top: auto;
-  background: transparent;
-  padding: 0;
-  border: none;
-  font: var(--font-m);
+.sidebar-toggle {
+  position: absolute;
+  right: -32px;
+  bottom: 0;
 }
