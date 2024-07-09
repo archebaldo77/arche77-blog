@@ -2,7 +2,7 @@
 import { useTranslation } from 'react-i18next';
 
 // shared;
-import { Button, ButtonTheme } from '@/shared/ui';
+import { Button, ButtonSize, ButtonTheme } from '@/shared/ui';
 
 // helpers;
 import { classNames } from '@/shared/lib';
@@ -17,12 +17,13 @@ enum AppLang {
 
 interface LangSwitcherProps {
   className?: string;
+  short?: boolean;
 }
 
 export const LangSwitcher = (props: LangSwitcherProps): JSX.Element => {
-  const { className = `` } = props;
+  const { className = ``, short = false } = props;
 
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const toggleLanguage = async (): Promise<void> => {
     await i18n.changeLanguage(
@@ -33,12 +34,11 @@ export const LangSwitcher = (props: LangSwitcherProps): JSX.Element => {
   return (
     <Button
       className={classNames(classes[`lang-switcher`], {}, [className])}
-      theme={ButtonTheme.PRIMARY_INVERTED}
-      onClick={async () => {
-        await toggleLanguage();
-      }}
+      theme={ButtonTheme.CLEAR_INVERTED}
+      size={ButtonSize.L}
+      onClick={toggleLanguage}
     >
-      {i18n.language === AppLang.RU ? `English` : `Русский`}
+      {short ? t(`Мини язык`) : t(`Язык`)}
     </Button>
   );
 };
