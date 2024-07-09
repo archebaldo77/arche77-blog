@@ -9,8 +9,8 @@ import { useTheme, Theme } from '@/app/providers/theme';
 import classes from './theme-switcher.module.scss';
 
 // icons;
-import Sun from '@/shared/assets/icons/sun.svg';
-import Moon from '@/shared/assets/icons/moon.svg';
+import SunIcon from '@/shared/assets/icons/sun.svg';
+import MoonIcon from '@/shared/assets/icons/moon.svg';
 
 interface ThemeSwitcherProps {
   className?: string;
@@ -28,12 +28,12 @@ export const ThemeSwitcher = (props: ThemeSwitcherProps): JSX.Element => {
       onClick={toggleTheme}
     >
       {theme === Theme.LIGHT ? (
-        <Moon
+        <SunIcon
           width={40}
           height={40}
         />
       ) : (
-        <Sun
+        <MoonIcon
           width={40}
           height={40}
         />
