@@ -33,7 +33,7 @@ export const ErrorIndicator = (props: ErrorIndicatorProps): JSX.Element => {
         {t(`Что-то пошло не так :(`)}
       </p>
       <Button
-        theme={ButtonTheme.PRIMARY}
+        theme={ButtonTheme.BACKGROUND}
         onClick={reloadPage}
       >
         {t(`Перезагрузить страницу`)}
