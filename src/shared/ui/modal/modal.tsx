@@ -1,6 +1,9 @@
 // libraries;
 import { useCallback, useEffect, useRef, useState, type FC } from 'react';
 
+// shared;
+import { Portal } from '@/shared/ui/';
+
 // helpers;
 import { classNames } from '@/shared/lib';
 
@@ -55,22 +58,24 @@ export const Modal: FC<ModalProps> = (props): JSX.Element => {
   );
 
   return (
-    <div
-      className={classNames(
-        classes[`modal`],
-        { [classes[`opened`]]: isOpen, [classes[`closing`]]: isClosing },
-        [className],
-      )}
-      onClick={closeHandler}
-    >
-      <div className={classNames(classes[`overlay`])}>
-        <div
-          className={classNames(classes[`content`])}
-          onClick={contentClickHandler}
-        >
-          {children}
+    <Portal>
+      <div
+        className={classNames(
+          classes[`modal`],
+          { [classes[`opened`]]: isOpen, [classes[`closing`]]: isClosing },
+          [className],
+        )}
+        onClick={closeHandler}
+      >
+        <div className={classNames(classes[`overlay`])}>
+          <div
+            className={classNames(classes[`content`])}
+            onClick={contentClickHandler}
+          >
+            {children}
+          </div>
         </div>
       </div>
-    </div>
+    </Portal>
   );
 };
