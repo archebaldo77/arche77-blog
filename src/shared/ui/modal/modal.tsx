@@ -5,6 +5,7 @@ import { useCallback, useEffect, useRef, useState, type FC } from 'react';
 import { Portal } from '@/shared/ui/';
 
 // helpers;
+import { useTheme } from '@/app/providers/theme';
 import { classNames } from '@/shared/lib';
 
 // styles;
@@ -17,6 +18,7 @@ interface ModalProps {
 }
 
 export const Modal: FC<ModalProps> = (props): JSX.Element => {
+  const [theme] = useTheme();
   const { className = ``, children, isOpen = false, onClose } = props;
 
   const [isClosing, setIsClosing] = useState<boolean>(false);
@@ -63,7 +65,7 @@ export const Modal: FC<ModalProps> = (props): JSX.Element => {
         className={classNames(
           classes[`modal`],
           { [classes[`opened`]]: isOpen, [classes[`closing`]]: isClosing },
-          [className],
+          [className, theme],
         )}
         onClick={closeHandler}
       >

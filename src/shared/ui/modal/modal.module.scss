@@ -13,7 +13,7 @@
   align-items: center;
   width: 100%;
   height: 100%;
-  background: rgba($color: #000, $alpha: 95%);
+  background: rgba($color: #000, $alpha: 80%);
 }
 
 .content {
@@ -22,8 +22,8 @@
   max-width: 60%;
   padding: 20px;
   border-radius: 15px;
+  background-color: var(--bg-color-inverted);
   color: var(--primary-color-inverted);
-  background: var(--bg-color-inverted);
   transform: scale(0.3);
   transition: transform 0.3s ease-in-out;
 }
