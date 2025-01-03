@@ -6,8 +6,14 @@ export interface BuildWebpackPaths {
   html: string;
 }
 
+export interface BuildWebpackEnvs {
+  port: number;
+  mode: BuildWebpackMode;
+}
+
 export interface BuildWebpackOptions {
   mode: BuildWebpackMode;
   paths: BuildWebpackPaths;
   isDev: boolean;
+  port: number;
 }
