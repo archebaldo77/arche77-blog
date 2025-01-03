@@ -7,7 +7,7 @@ import {
 } from './config/webpack/types/common';
 
 const paths: BuildWebpackPaths = {
-  entry: path.resolve(__dirname, `src`, `index.ts`),
+  entry: path.resolve(__dirname, `src`, `index.tsx`),
   dist: path.resolve(__dirname, `dist`),
   html: path.resolve(__dirname, `public`, `index.html`),
 };
