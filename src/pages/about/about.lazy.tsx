@@ -1,3 +1,5 @@
 import { lazy } from 'react';
 
-export const AboutLazy = lazy(() => import(`./about`));
+export const AboutLazy: React.LazyExoticComponent<() => JSX.Element> = lazy(
+  () => import(`./about`)
+);
