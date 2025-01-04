@@ -1,30 +1,25 @@
-import { useState } from 'react';
+import { Suspense } from 'react';
+import { Routes, Route, Link } from 'react-router-dom';
+
+import { MainLazy } from '../../pages/main/main.lazy';
+import { AboutLazy } from '../../pages/about/about.lazy';
 
 import classes from './app.module.scss';
 
 export const App = (): JSX.Element => {
-  const [count, setCount] = useState<number>(0);
-
   return (
-    <div>
-      <h2>Hello from React</h2>
-      <p className={classes.count}>Count: {count}</p>
-      <div className={classes.buttons}>
-        <button
-          onClick={() => {
-            setCount(count + 1);
-          }}
-        >
-          INC
-        </button>
-        <button
-          onClick={() => {
-            setCount(count - 1);
-          }}
-        >
-          DEC
-        </button>
-      </div>
+    <div className={classes.app}>
+      <header className={classes.header}>
+        <Link to={`/`}>Главная страница</Link>
+        <Link to={`/about`}>О нас</Link>
+      </header>
+      <br />
+      <Suspense fallback={`Loading...`}>
+        <Routes>
+          <Route index element={<MainLazy />} />
+          <Route path='/about' element={<AboutLazy />} />
+        </Routes>
+      </Suspense>
     </div>
   );
 };
