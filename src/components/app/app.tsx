@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import './app.scss';
+import classes from './app.module.scss';
 
 export const App = (): JSX.Element => {
   const [count, setCount] = useState<number>(0);
@@ -8,8 +8,8 @@ export const App = (): JSX.Element => {
   return (
     <div>
       <h2>Hello from React</h2>
-      <p className='count'>Count: {count}</p>
-      <div className='buttons'>
+      <p className={classes.count}>Count: {count}</p>
+      <div className={classes.buttons}>
         <button
           onClick={() => {
             setCount(count + 1);

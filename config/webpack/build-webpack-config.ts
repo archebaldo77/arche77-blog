@@ -21,7 +21,7 @@ export const buildWebpackConfig = (
     },
     plugins: buildWebpackPlugins(options),
     module: {
-      rules: buildWebpackLoaders(),
+      rules: buildWebpackLoaders(options),
     },
     resolve: buildWebpackResolvers(),
     devServer: isDev ? buildWebpackDevServer(options) : undefined,

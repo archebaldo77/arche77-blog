@@ -1,15 +1,39 @@
-import { type ModuleOptions } from 'webpack';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
-export const buildWebpackLoaders = (): ModuleOptions[`rules`] => {
+import { type ModuleOptions } from 'webpack';
+import { type BuildWebpackOptions } from '../types/common';
+
+export const buildWebpackLoaders = (
+  options: BuildWebpackOptions
+): ModuleOptions[`rules`] => {
+  const { isDev } = options;
+
   const typescriptLoader = {
     test: /\.tsx?$/,
     use: `ts-loader`,
     exclude: /node_modules/,
   };
 
+  const cssLoader = {
+    loader: 'css-loader',
+    options: {
+      modules: {
+        auto: true,
+        namedExport: false,
+        localIdentName: isDev
+          ? `[path][name]__[local]--[hash:base64:5]`
+          : `[hash:base64:5]`,
+      },
+    },
+  };
+
   const scssLoader = {
     test: /\.s[ac]ss$/i,
-    use: [`style-loader`, `css-loader`, `sass-loader`],
+    use: [
+      isDev ? `style-loader` : MiniCssExtractPlugin.loader,
+      cssLoader,
+      `sass-loader`,
+    ],
   };
 
   return [typescriptLoader, scssLoader];
