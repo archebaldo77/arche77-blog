@@ -2,12 +2,15 @@ import { render } from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 
 import { App } from './components/app/app';
+import { ThemeProvider } from './theme/theme-provider';
 
-import './style.scss';
+import './styles/style.scss';
 
 render(
   <BrowserRouter>
-    <App />
+    <ThemeProvider>
+      <App />
+    </ThemeProvider>
   </BrowserRouter>,
   document.getElementById(`root`),
 );
