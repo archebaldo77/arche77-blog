@@ -1,4 +1,4 @@
-import { classNames } from '../../../helpers/class-names/class-names';
+import { classNames } from '../../helpers/class-names/class-names';
 
 import classes from './main.module.scss';
 

@@ -4,7 +4,7 @@ import { Routes, Route, Link } from 'react-router-dom';
 import { MainLazy } from '../../pages/main/main.lazy';
 import { AboutLazy } from '../../pages/about/about.lazy';
 
-import { classNames } from '../../../helpers/class-names/class-names';
+import { classNames } from '../../helpers/class-names/class-names';
 
 import classes from './app.module.scss';
 

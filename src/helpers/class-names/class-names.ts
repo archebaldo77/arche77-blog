@@ -3,7 +3,7 @@ type Mods = Record<string, boolean>;
 export const classNames = (
   mainClasses: string,
   mods: Mods = {},
-  additionalClasses: string[] = []
+  additionalClasses: string[] = [],
 ): string => {
   return [
     mainClasses,
