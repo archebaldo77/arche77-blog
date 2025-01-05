@@ -1,10 +1,7 @@
-import { Suspense } from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
+import { AppRouter } from '@/app/providers/router-provider';
 import { useTheme } from '@/app/providers/theme-provider';
-
-import { MainLazy } from '@/pages/main';
-import { AboutLazy } from '@/pages/about';
 
 import { classNames } from '@/shared/lib';
 
@@ -21,12 +18,7 @@ export const App = (): JSX.Element => {
         <button onClick={toggleTheme}>Изменить тему</button>
       </header>
       <br />
-      <Suspense fallback={`Loading...`}>
-        <Routes>
-          <Route index element={<MainLazy />} />
-          <Route path='/about' element={<AboutLazy />} />
-        </Routes>
-      </Suspense>
+      <AppRouter />
     </div>
   );
 };
