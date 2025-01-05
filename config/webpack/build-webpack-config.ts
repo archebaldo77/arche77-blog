@@ -7,7 +7,7 @@ import { type Configuration } from 'webpack';
 import { type BuildWebpackOptions } from './types/common';
 
 export const buildWebpackConfig = (
-  options: BuildWebpackOptions
+  options: BuildWebpackOptions,
 ): Configuration => {
   const { paths, mode, isDev } = options;
 
@@ -23,7 +23,7 @@ export const buildWebpackConfig = (
     module: {
       rules: buildWebpackLoaders(options),
     },
-    resolve: buildWebpackResolvers(),
+    resolve: buildWebpackResolvers(options),
     devServer: isDev ? buildWebpackDevServer(options) : undefined,
     devtool: isDev ? `inline-source-map` : undefined,
   };

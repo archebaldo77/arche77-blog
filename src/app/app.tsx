@@ -1,12 +1,12 @@
 import { Suspense } from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 
-import { useTheme } from '../../theme/use-theme';
+import { useTheme } from '@/app/providers/theme-provider';
 
-import { MainLazy } from '../../pages/main/main.lazy';
-import { AboutLazy } from '../../pages/about/about.lazy';
+import { MainLazy } from '@/pages/main';
+import { AboutLazy } from '@/pages/about';
 
-import { classNames } from '../../helpers/class-names/class-names';
+import { classNames } from '@/shared/lib';
 
 import classes from './app.module.scss';
 

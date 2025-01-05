@@ -2,12 +2,12 @@ import path from 'path';
 import { buildWebpackConfig } from './config/webpack/build-webpack-config';
 import {
   type BuildWebpackEnvs,
-  type BuildWebpackMode,
   type BuildWebpackPaths,
 } from './config/webpack/types/common';
 
 const paths: BuildWebpackPaths = {
   entry: path.resolve(__dirname, `src`, `index.tsx`),
+  src: path.resolve(__dirname, `src`),
   dist: path.resolve(__dirname, `dist`),
   html: path.resolve(__dirname, `public`, `index.html`),
 };
