@@ -8,3 +8,13 @@
   border: none;
   background-color: transparent;
 }
+
+.primary {
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+}
+
+.inverted-primary {
+  background-color: var(--inverted-bg-color);
+  color: var(--inverted-primary-color);
+}

@@ -6,6 +6,8 @@ import { type FC, type ButtonHTMLAttributes } from 'react';
 
 export enum ButtonTheme {
   CLEAR = `clear`,
+  PRIMARY = `primary`,
+  INVERTED_PRIMARY = `inverted-primary`,
 }
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
