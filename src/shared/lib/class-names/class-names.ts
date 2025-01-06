@@ -10,9 +10,8 @@ export const classNames = (
     ...Object.entries(mods)
       .filter(([, boolFlag]) => Boolean(boolFlag))
       .map(([className]) => className),
-    ...additionalClasses,
+    ...additionalClasses.filter(Boolean),
   ]
-    .map((el) => el.trim())
     .join(` `)
     .trim();
 };

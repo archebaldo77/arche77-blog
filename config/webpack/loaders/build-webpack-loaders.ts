@@ -4,7 +4,7 @@ import { type ModuleOptions } from 'webpack';
 import { type BuildWebpackOptions } from '../types/common';
 
 export const buildWebpackLoaders = (
-  options: BuildWebpackOptions
+  options: BuildWebpackOptions,
 ): ModuleOptions[`rules`] => {
   const { isDev } = options;
 
@@ -20,6 +20,7 @@ export const buildWebpackLoaders = (
       modules: {
         auto: true,
         namedExport: false,
+        exportLocalsConvention: `camel-case`,
         localIdentName: isDev
           ? `[path][name]__[local]--[hash:base64:5]`
           : `[hash:base64:5]`,

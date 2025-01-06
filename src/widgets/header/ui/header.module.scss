@@ -1,0 +1,15 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: var(--header-height);
+  padding: 20px;
+  background-color: var(--inverted-bg-color);
+  color: var(--inverted-primary-color);
+}
+
+.app-navigation {
+  display: flex;
+  column-gap: 10px;
+}
