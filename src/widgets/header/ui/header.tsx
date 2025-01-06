@@ -1,6 +1,6 @@
-import { useTheme } from '@/app/providers/theme-provider';
 import { routePath } from '@/app/providers/router-provider';
 
+import { ThemeSwitcher } from '@/widgets/theme-switcher';
 import { AppLink, AppLinkTheme } from '@/shared/ui';
 
 import { classNames } from '@/shared/lib';
@@ -13,7 +13,6 @@ interface HeaderProps {
 
 export const Header = (props: HeaderProps): JSX.Element => {
   const { className = `` } = props;
-  const { toggleTheme } = useTheme();
 
   return (
     <header className={classNames(classes[`header`], {}, [className])}>
@@ -25,7 +24,7 @@ export const Header = (props: HeaderProps): JSX.Element => {
           О нас
         </AppLink>
       </nav>
-      <button onClick={toggleTheme}>Изменить тему</button>
+      <ThemeSwitcher />
     </header>
   );
 };
