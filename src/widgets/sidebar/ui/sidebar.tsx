@@ -1,8 +1,12 @@
+import { useState } from 'react';
+
+import { LanguageSwitcher } from '@/widgets/language-switcher';
+import { ThemeSwitcher } from '@/widgets/theme-switcher';
+import { Button, ButtonTheme } from '@/shared/ui';
+
 import { classNames } from '@/shared/lib';
 
 import classes from './sidebar.module.scss';
-import { Button, ButtonTheme } from '@/shared/ui';
-import { useState } from 'react';
 
 interface SidebarProps {
   className?: string;
@@ -12,7 +16,7 @@ export const Sidebar = (props: SidebarProps): JSX.Element => {
   const { className = `` } = props;
   const [collapsed, setCollapsed] = useState<boolean>(false);
 
-  const onToggle = () => {
+  const onToggleSidebar = () => {
     setCollapsed((prev) => !prev);
   };
 
@@ -24,11 +28,15 @@ export const Sidebar = (props: SidebarProps): JSX.Element => {
         [className],
       )}>
       <Button
-        onClick={onToggle}
+        onClick={onToggleSidebar}
         theme={ButtonTheme.INVERTED_PRIMARY}
         className={classNames(classes[`btn-toggle`])}>
         {collapsed ? `>` : `<`}
       </Button>
+      <div className={classNames(classes[`switchers`])}>
+        <ThemeSwitcher />
+        <LanguageSwitcher />
+      </div>
     </div>
   );
 };

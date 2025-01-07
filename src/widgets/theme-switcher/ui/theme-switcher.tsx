@@ -21,9 +21,9 @@ export const ThemeSwitcher = (props: ThemeSwitcherProps): JSX.Element => {
     <div className={classNames(classes[`theme-switcher`], {}, [className])}>
       <Button onClick={toggleTheme} theme={ButtonTheme.CLEAR}>
         {theme === Theme.LIGHT ? (
-          <SunIcon width={30} height={30} />
+          <SunIcon width={50} height={50} />
         ) : (
-          <MoonIcon width={30} height={30} />
+          <MoonIcon width={50} height={50} />
         )}
       </Button>
     </div>
