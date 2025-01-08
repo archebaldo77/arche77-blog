@@ -13,3 +13,7 @@ body {
   color: var(--primary-color);
   min-height: 100vh;
 }
+
+#root {
+  min-height: inherit;
+}
