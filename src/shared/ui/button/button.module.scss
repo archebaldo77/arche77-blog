@@ -2,6 +2,7 @@
   cursor: pointer;
   color: inherit;
   border: none;
+  padding: 10px;
 }
 
 .clear {
@@ -17,4 +18,16 @@
 .inverted-primary {
   background-color: var(--inverted-bg-color);
   color: var(--inverted-primary-color);
+}
+
+.outline-primary {
+  border: 2px solid var(--primary-color);
+  border-radius: 15px;
+  background: transparent;
+}
+
+.inverted-outline-primary {
+  border: 2px solid var(--inverted-primary-color);
+  border-radius: 15px;
+  background: transparent;
 }

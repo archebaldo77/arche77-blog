@@ -8,6 +8,8 @@ export enum ButtonTheme {
   CLEAR = `clear`,
   PRIMARY = `primary`,
   INVERTED_PRIMARY = `inverted-primary`,
+  OUTLINE_PRIMARY = `outline-primary`,
+  INVERTED_OUTLINE_PRIMARY = `inverted-outline-primary`,
 }
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
