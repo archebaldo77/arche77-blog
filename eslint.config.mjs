@@ -18,5 +18,11 @@ export default [
       'react/no-deprecated': `warn`,
     },
   },
+  {
+    ignores: [`./src/**/*.test.{ts,tsx}`],
+    rules: {
+      'i18next/no-literal-string': `off`,
+    },
+  },
   eslintConfigPrettier,
 ];
