@@ -26,11 +26,13 @@ export const Sidebar = (props: SidebarProps): JSX.Element => {
         classes[`sidebar`],
         { [classes[`collapsed`]]: collapsed },
         [className],
-      )}>
+      )}
+      data-testid='sidebar'>
       <Button
         onClick={onToggleSidebar}
         theme={ButtonTheme.INVERTED_PRIMARY}
-        className={classNames(classes[`btn-toggle`])}>
+        className={classNames(classes[`btn-toggle`])}
+        data-testid='sidebar-button'>
         {collapsed ? `>` : `<`}
       </Button>
       <div className={classNames(classes[`switchers`])}>
