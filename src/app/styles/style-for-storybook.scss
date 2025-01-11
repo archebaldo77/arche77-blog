@@ -1,0 +1,9 @@
+@use './variables/global';
+@use './themes/light';
+@use './themes/dark';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
