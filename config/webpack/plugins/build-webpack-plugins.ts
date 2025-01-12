@@ -11,7 +11,7 @@ export const buildWebpackPlugins = (
 ): Configuration[`plugins`] => {
   const { paths, isDev } = options;
 
-  return [
+  const plugins = [
     new ProgressPlugin(),
     new HtmlWebpackPlugin({
       template: paths.html,
@@ -23,8 +23,15 @@ export const buildWebpackPlugins = (
     new DefinePlugin({
       __IS_DEV__: JSON.stringify(isDev),
     }),
-    new BundleAnalyzerPlugin({
-      openAnalyzer: false,
-    }),
   ];
+
+  if (isDev) {
+    plugins.push(
+      new BundleAnalyzerPlugin({
+        openAnalyzer: false,
+      }),
+    );
+  }
+
+  return plugins;
 };

@@ -12,6 +12,9 @@
     "test:unit": "jest --config=./config/jest/jest.config.ts",
     "test:ui": "loki test",
     "test:ui:approve": "loki approve",
+    "test:ui:json": "npx ts-node scripts/generate-visual-json-report.ts",
+    "test:ui:html": "reg-cli --from .loki/report.json --report .loki/report.html",
+    "test:ui:report": "npm run test:ui:json && npm run test:ui:html",
     "storybook": "storybook dev -p 6006 --config-dir ./config/storybook",
     "storybook:build": "storybook build --config-dir ./config/storybook"
   },
@@ -61,6 +64,7 @@
     "loki": "0.35.1",
     "mini-css-extract-plugin": "2.9.2",
     "prettier": "3.4.2",
+    "reg-cli": "0.18.10",
     "sass": "1.83.0",
     "sass-loader": "16.0.4",
     "storybook": "8.4.7",
