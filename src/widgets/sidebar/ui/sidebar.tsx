@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import { LanguageSwitcher } from '@/widgets/language-switcher';
 import { ThemeSwitcher } from '@/widgets/theme-switcher';
-import { Button, ButtonTheme } from '@/shared/ui';
+import { Button, ButtonTheme, ButtonSize } from '@/shared/ui';
 
 import { classNames } from '@/shared/lib';
 
@@ -32,12 +32,14 @@ export const Sidebar = (props: SidebarProps): JSX.Element => {
         onClick={onToggleSidebar}
         theme={ButtonTheme.INVERTED_PRIMARY}
         className={classNames(classes[`btn-toggle`])}
-        data-testid='sidebar-button'>
+        data-testid='sidebar-button'
+        size={ButtonSize.L}
+        square>
         {collapsed ? `>` : `<`}
       </Button>
       <div className={classNames(classes[`switchers`])}>
         <ThemeSwitcher />
-        <LanguageSwitcher />
+        <LanguageSwitcher short={collapsed} />
       </div>
     </div>
   );
