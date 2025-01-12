@@ -13,10 +13,11 @@ enum AppLanguage {
 
 interface LanguageSwitcherProps {
   className?: string;
+  short: boolean;
 }
 
 export const LanguageSwitcher = (props: LanguageSwitcherProps): JSX.Element => {
-  const { className = `` } = props;
+  const { className = ``, short } = props;
   const { t, i18n } = useTranslation();
 
   const onToggleLanguage = () => {
@@ -30,7 +31,7 @@ export const LanguageSwitcher = (props: LanguageSwitcherProps): JSX.Element => {
       className={classNames(classes[`language-switcher`], {}, [className])}
       theme={ButtonTheme.INVERTED_PRIMARY}
       onClick={onToggleLanguage}>
-      {t(`Язык`)}
+      {t(short ? `Язык short` : `Язык full`)}
     </Button>
   );
 };
