@@ -1,2 +1,2 @@
 export { classNames } from './class-names/class-names';
-export { renderWithTranslations } from './render-with-translations/render-with-translations';
+export { renderComponent } from './render-component/render-component';
