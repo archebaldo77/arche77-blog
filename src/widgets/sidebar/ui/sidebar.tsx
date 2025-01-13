@@ -7,6 +7,7 @@ import { Button, ButtonTheme, ButtonSize } from '@/shared/ui';
 import { classNames } from '@/shared/lib';
 
 import classes from './sidebar.module.scss';
+import { AppNavigation } from '@/widgets/app-navigation';
 
 interface SidebarProps {
   className?: string;
@@ -28,6 +29,7 @@ export const Sidebar = (props: SidebarProps): JSX.Element => {
         [className],
       )}
       data-testid='sidebar'>
+      <AppNavigation collapsed={collapsed} />
       <Button
         onClick={onToggleSidebar}
         theme={ButtonTheme.INVERTED_PRIMARY}
