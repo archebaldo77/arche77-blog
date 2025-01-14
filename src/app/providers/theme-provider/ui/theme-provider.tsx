@@ -5,12 +5,16 @@ import {
   LOCAL_STORAGE_APP_THEME_KEY,
 } from '../lib/theme-context';
 
+interface ThemeProviderProps {
+  initialTheme?: Theme;
+}
+
 const defaultTheme =
   (localStorage.getItem(LOCAL_STORAGE_APP_THEME_KEY) as Theme) || Theme.LIGHT;
 
-export const ThemeProvider: FC = (props) => {
-  const { children } = props;
-  const [theme, setTheme] = useState<Theme>(defaultTheme);
+export const ThemeProvider: FC<ThemeProviderProps> = (props) => {
+  const { children, initialTheme } = props;
+  const [theme, setTheme] = useState<Theme>(initialTheme || defaultTheme);
 
   useEffect(() => {
     document.body.className = defaultTheme;
