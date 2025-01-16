@@ -1,0 +1,13 @@
+{
+    "posts": [
+      { "id": "1", "title": "First title", "views": 100 },
+      { "id": "2", "title": "Second title", "views": 200 }
+    ],
+    "comments": [
+      { "id": "1", "text": "First comment", "postId": "1" },
+      { "id": "2", "text": "Second comment", "postId": "1" }
+    ],
+    "profile": {
+      "name": "AZ"
+    }
+  }
