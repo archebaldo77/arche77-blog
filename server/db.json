@@ -1,0 +1,38 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "First title",
+      "views": 100
+    },
+    {
+      "id": "2",
+      "title": "Second title",
+      "views": 200
+    },
+    {
+      "username": "AZ",
+      "password": "qwerty123",
+      "id": "tV2sVj7"
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "First comment",
+      "postId": "1"
+    },
+    {
+      "id": "2",
+      "text": "Second comment",
+      "postId": "1"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "AZ",
+      "password": "qwerty123"
+    }
+  ]
+}
