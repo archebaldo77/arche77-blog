@@ -5,6 +5,9 @@ import type { Config } from 'jest';
 const rootDir = path.resolve(__dirname, `../..`);
 
 const config: Config = {
+  globals: {
+    __IS_DEV__: true,
+  },
   rootDir,
   clearMocks: true,
   testEnvironment: `jsdom`,

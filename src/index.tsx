@@ -9,16 +9,19 @@ import { ErrorBoundary } from '@/app/providers/error-boundary';
 import '@/shared/config/i18n/i18n-config';
 
 import '@/app/styles/style.scss';
+import { StoreProvider } from '@/app/providers/store-provider';
 
 render(
-  <BrowserRouter>
-    <ErrorBoundary>
-      <ThemeProvider>
-        <Suspense fallback='Loading translations...'>
-          <App />
-        </Suspense>
-      </ThemeProvider>
-    </ErrorBoundary>
-  </BrowserRouter>,
+  <StoreProvider>
+    <BrowserRouter>
+      <ErrorBoundary>
+        <ThemeProvider>
+          <Suspense fallback='Loading translations...'>
+            <App />
+          </Suspense>
+        </ThemeProvider>
+      </ErrorBoundary>
+    </BrowserRouter>
+  </StoreProvider>,
   document.getElementById(`root`),
 );
