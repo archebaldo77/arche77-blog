@@ -22,14 +22,6 @@ server.use(async (_req, _res, next) => {
   next();
 });
 
-server.use((req, res, next) => {
-  if (!req.headers.authorization) {
-    return res.status(403).json({ message: 'Authorization error' });
-  }
-
-  next();
-});
-
 server.post(`/login`, (req, res) => {
   const { username, password } = req.body;
 
@@ -47,6 +39,14 @@ server.post(`/login`, (req, res) => {
   }
 
   return res.status(403).json({ message: 'Authorization error' });
+});
+
+server.use((req, res, next) => {
+  if (!req.headers.authorization) {
+    return res.status(403).json({ message: 'Authorization error' });
+  }
+
+  next();
 });
 
 server.use(router);
