@@ -1,3 +1,5 @@
+import { UserSchema } from '@/entities/user';
+
 export interface StateSchema {
-  value: string;
+  user: UserSchema;
 }
